@@ -1,0 +1,395 @@
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\bin\Release\netcoreapp2.1\appsettings.Development.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\bin\Release\netcoreapp2.1\appsettings.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\bin\Release\netcoreapp2.1\Connected Services\ECXSecurityAccess\ConnectedService.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.deps.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.runtimeconfig.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.runtimeconfig.dev.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.dll
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.pdb
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.Views.dll
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.Views.pdb
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.AssemblyInfoInputs.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.AssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csproj.CoreCompileInputs.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorAssemblyInfo.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorAssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.TagHelpers.input.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.TagHelpers.output.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorCoreGenerate.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Account\Logout.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Error.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\ErrorAll.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ClaimPenaltyUnenforced.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ExtendOverdueCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\LiftSuspension.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\PostFirstWarning.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\PostSecondWarning.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ReassignExtendedCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\SettlePayment.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\ReviewCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\SentDoc.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\SignedDoc.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\UnSignedDoc.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\VCTSReports\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\CaseAccepted.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\DecideOnCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\DecisionSentSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\InvestigatorCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\ProcessCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\RecommendationSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\RecommendOnCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignInvestigator.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\CasesToDrop.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DecideonSelectedCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DecideSelectedBCCCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DropSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\PassBCC.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\ReinstateSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\ReviewToDecide.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\SuccessDecisionPassed.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\ReExamineCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\ReportViolation.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SentBackCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SuccesModifiedMsg.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SuccessMsg.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorTargetAssemblyInfo.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorTargetAssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.Views.pdb
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.dll
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.pdb
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.genruntimeconfig.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csproj.CopyComplete
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\GetSelectedListforBCC.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csprojAssemblyReference.cache
+E:\Tariku\aftermath\ECX.VCTS\bin\Release\netcoreapp2.1\appsettings.Development.json
+E:\Tariku\aftermath\ECX.VCTS\bin\Release\netcoreapp2.1\appsettings.json
+E:\Tariku\aftermath\ECX.VCTS\bin\Release\netcoreapp2.1\Connected Services\ECXSecurityAccess\ConnectedService.json
+E:\Tariku\aftermath\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.deps.json
+E:\Tariku\aftermath\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.runtimeconfig.json
+E:\Tariku\aftermath\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.runtimeconfig.dev.json
+E:\Tariku\aftermath\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.dll
+E:\Tariku\aftermath\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.pdb
+E:\Tariku\aftermath\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.Views.dll
+E:\Tariku\aftermath\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.Views.pdb
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csprojAssemblyReference.cache
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.AssemblyInfoInputs.cache
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.AssemblyInfo.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csproj.CoreCompileInputs.cache
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorAssemblyInfo.cache
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorAssemblyInfo.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.TagHelpers.input.cache
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.TagHelpers.output.cache
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorCoreGenerate.cache
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Account\Logout.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Error.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\ErrorAll.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ClaimPenaltyUnenforced.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ExtendOverdueCase.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\Index.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\LiftSuspension.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\PostFirstWarning.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\PostSecondWarning.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ReassignExtendedCase.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\SettlePayment.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\Index.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\ReviewCase.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\SentDoc.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\SignedDoc.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\UnSignedDoc.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\VCTSReports\Index.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\CaseAccepted.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\DecideOnCase.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\DecisionSentSuccess.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\Index.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\InvestigatorCases.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\ProcessCase.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\RecommendationSuccess.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\RecommendOnCase.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignCases.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignInvestigator.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignSuccess.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\CasesToDrop.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DecideonSelectedCases.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DecideSelectedBCCCases.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DropSuccess.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\GetSelectedListforBCC.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\Index.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\PassBCC.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\ReinstateSuccess.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\ReviewToDecide.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\SuccessDecisionPassed.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\ReExamineCase.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\ReportViolation.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SentBackCases.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SuccesModifiedMsg.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SuccessMsg.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorTargetAssemblyInfo.cache
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorTargetAssemblyInfo.cs
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.Views.pdb
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.dll
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.pdb
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.genruntimeconfig.cache
+E:\Tariku\aftermath\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csproj.CopyComplete
+C:\Users\tariku.worku\Desktop\ECX.VCTS\bin\Release\netcoreapp2.1\appsettings.Development.json
+C:\Users\tariku.worku\Desktop\ECX.VCTS\bin\Release\netcoreapp2.1\appsettings.json
+C:\Users\tariku.worku\Desktop\ECX.VCTS\bin\Release\netcoreapp2.1\Connected Services\ECXSecurityAccess\ConnectedService.json
+C:\Users\tariku.worku\Desktop\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.deps.json
+C:\Users\tariku.worku\Desktop\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.runtimeconfig.json
+C:\Users\tariku.worku\Desktop\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.runtimeconfig.dev.json
+C:\Users\tariku.worku\Desktop\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.dll
+C:\Users\tariku.worku\Desktop\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.pdb
+C:\Users\tariku.worku\Desktop\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.Views.dll
+C:\Users\tariku.worku\Desktop\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.Views.pdb
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csprojAssemblyReference.cache
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.AssemblyInfoInputs.cache
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.AssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csproj.CoreCompileInputs.cache
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorAssemblyInfo.cache
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorAssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.TagHelpers.input.cache
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.TagHelpers.output.cache
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorCoreGenerate.cache
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Account\Logout.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Error.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\ErrorAll.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ClaimPenaltyUnenforced.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ExtendOverdueCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\LiftSuspension.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\PostFirstWarning.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\PostSecondWarning.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ReassignExtendedCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\SettlePayment.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\ReviewCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\SentDoc.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\SignedDoc.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\UnSignedDoc.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\VCTSReports\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\CaseAccepted.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\DecideOnCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\DecisionSentSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\InvestigatorCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\ProcessCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\RecommendationSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\RecommendOnCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignInvestigator.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\CasesToDrop.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DecideonSelectedCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DecideSelectedBCCCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DropSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\GetSelectedListforBCC.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\PassBCC.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\ReinstateSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\ReviewToDecide.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\SuccessDecisionPassed.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\ReExamineCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\ReportViolation.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SentBackCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SuccesModifiedMsg.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SuccessMsg.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorTargetAssemblyInfo.cache
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorTargetAssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.Views.pdb
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.dll
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.pdb
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.genruntimeconfig.cache
+C:\Users\tariku.worku\Desktop\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csproj.CopyComplete
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\bin\Release\netcoreapp2.1\appsettings.Development.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\bin\Release\netcoreapp2.1\appsettings.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\bin\Release\netcoreapp2.1\Connected Services\ECXSecurityAccess\ConnectedService.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.deps.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.runtimeconfig.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.runtimeconfig.dev.json
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.dll
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.pdb
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.Views.dll
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.Views.pdb
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csprojAssemblyReference.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.AssemblyInfoInputs.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.AssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csproj.CoreCompileInputs.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorAssemblyInfo.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorAssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.TagHelpers.input.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.TagHelpers.output.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorCoreGenerate.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Account\Logout.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Error.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\ErrorAll.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ClaimPenaltyUnenforced.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ExtendOverdueCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\LiftSuspension.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\PostFirstWarning.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\PostSecondWarning.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ReassignExtendedCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\SettlePayment.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\ReviewCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\SentDoc.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\SignedDoc.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\UnSignedDoc.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\VCTSReports\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\CaseAccepted.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\DecideOnCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\DecisionSentSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\InvestigatorCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\ProcessCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\RecommendationSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\RecommendOnCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignInvestigator.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\CasesToDrop.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DecideonSelectedCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DecideSelectedBCCCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DropSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\GetSelectedListforBCC.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\Index.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\PassBCC.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\ReinstateSuccess.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\ReviewToDecide.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\SuccessDecisionPassed.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\ReExamineCase.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\ReportViolation.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SentBackCases.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SuccesModifiedMsg.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SuccessMsg.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorTargetAssemblyInfo.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorTargetAssemblyInfo.cs
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.Views.pdb
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.dll
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.pdb
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.genruntimeconfig.cache
+C:\Users\tariku.worku\Desktop\Assigned\V3.0_Buckups\afterUAT\Published Code\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csproj.CopyComplete
+E:\Tariku\Finalized\ECX.VCTS\bin\Release\netcoreapp2.1\appsettings.Development.json
+E:\Tariku\Finalized\ECX.VCTS\bin\Release\netcoreapp2.1\appsettings.json
+E:\Tariku\Finalized\ECX.VCTS\bin\Release\netcoreapp2.1\Connected Services\ECXSecurityAccess\ConnectedService.json
+E:\Tariku\Finalized\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.deps.json
+E:\Tariku\Finalized\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.runtimeconfig.json
+E:\Tariku\Finalized\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.runtimeconfig.dev.json
+E:\Tariku\Finalized\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.dll
+E:\Tariku\Finalized\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.pdb
+E:\Tariku\Finalized\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.Views.dll
+E:\Tariku\Finalized\ECX.VCTS\bin\Release\netcoreapp2.1\ECX.VCTS.Views.pdb
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csprojAssemblyReference.cache
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.AssemblyInfoInputs.cache
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.AssemblyInfo.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csproj.CoreCompileInputs.cache
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorAssemblyInfo.cache
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorAssemblyInfo.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.TagHelpers.input.cache
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.TagHelpers.output.cache
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorCoreGenerate.cache
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Account\Logout.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Error.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\ErrorAll.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ClaimPenaltyUnenforced.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ExtendOverdueCase.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\Index.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\LiftSuspension.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\PostFirstWarning.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\PostSecondWarning.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\ReassignExtendedCase.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Notifications\SettlePayment.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\Index.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\ReviewCase.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\SentDoc.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\SignedDoc.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\UndertakingOfficer\UnSignedDoc.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\VCTSReports\Index.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\CaseAccepted.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\DecideOnCase.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\DecisionSentSuccess.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\Index.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\InvestigatorCases.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\ProcessCase.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\RecommendationSuccess.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationInvestigator\RecommendOnCase.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignCases.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignInvestigator.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\AssignSuccess.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\CasesToDrop.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DecideonSelectedCases.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DecideSelectedBCCCases.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\DropSuccess.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\GetSelectedListforBCC.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\Index.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\PassBCC.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\ReinstateSuccess.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\ReviewToDecide.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationManager\SuccessDecisionPassed.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\ReExamineCase.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\ReportViolation.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SentBackCases.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SuccesModifiedMsg.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\ViolationReporter\SuccessMsg.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorTargetAssemblyInfo.cache
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.RazorTargetAssemblyInfo.cs
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.Views.pdb
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.dll
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.pdb
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.genruntimeconfig.cache
+E:\Tariku\Finalized\ECX.VCTS\obj\Release\netcoreapp2.1\ECX.VCTS.csproj.CopyComplete

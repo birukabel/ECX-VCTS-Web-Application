@@ -1,0 +1,173 @@
+﻿@model ECX.VCTS.ViewModels.CasesAssignmentViewModel
+@{
+    ViewData["Title"] = "AssignCases";
+    ViewBag.Subtitle = "Assign Investigator for Cases";
+}
+
+<div id="filterarea">
+    @using (Html.BeginForm())
+    {
+        <table class="table">
+            <tbody>
+                <tr id="searchcol">
+                    <td>
+                        <label asp-for="ViolatorName" class="control-label" style="display:block;"></label>
+                        <input type="text" asp-for="ViolatorName" id="violatorbox" placeholder="Alleged Violator Name" name="ViolatorName" style="width:80%; height:30px;" />
+                        @*<input type="text" id="violatorbox" placeholder="Alleged Violator Name" name="ViolatorName"/>*@
+                    </td>
+                    <td>
+                        @Html.LabelFor(m => m.ViolationType)
+                        @Html.DropDownListFor(m => m.ViolationType, Model.ViolationTypes,
+                       "Choose Type", new { @class = "form-control", @id = "typechosen", @name = "ViolationType" })
+
+                    </td>
+                    <td style="padding-top:35px;">
+                        <input type="submit" value="Search" id="srchbtn" class="btn btn-primary" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>
+
+<div id="messagearea" style="text-align:center;" hidden>
+    <h2>No Reported Cases to Assign!!!</h2>
+</div>
+
+<div id="resultarea">
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th hidden>Violation Case Id</th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ViolationType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ViolatorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ExchangeCenterName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().OthersModel.ViolationDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ReportDate)
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model.OthersModel)
+            {
+            <tr>
+                <td hidden>
+                    @Html.DisplayFor(modelItem => item.ViolationModel.ViolationCaseId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OthersModel.ViolationDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ViolationModel.ReportDate)
+                </td>
+            </tr>
+            }
+            @foreach (var item in Model.SurveillanceModel)
+            {
+        <tr>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.ViolationModel.ViolationCaseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurveillanceModel.ViolationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViolationModel.ReportDate)
+            </td>
+        </tr>
+            }
+            @foreach (var item in Model.TradeModel)
+            {
+        <tr>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.ViolationModel.ViolationCaseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TradeModel.ViolationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViolationModel.ReportDate)
+            </td>
+        </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div id="assignarea">
+    <form asp-controller="ViolationManager" asp-action="AssignInvestigator">
+        <b>Investigator Name to Assign:</b>
+        <input asp-for="InvestigatorName" name="InvestigatorName" class="form-control" id="investigatorname" style="display:inline; width:50%" autofocus />
+        @*@Html.TextBox("InvestigatorName", null, new { id = "investigatorname" })*@
+        <input type="submit" value="Assign Cases" class="btn btn-primary" />
+
+    </form>
+</div>
+
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (@Model.OthersModel.Count > 0 ||
+                @Model.SurveillanceModel.Count > 0 ||
+                @Model.TradeModel.Count > 0) {
+
+                if ($('#violatorbox').val() != "" || $('#violationbox').val() != "") {
+                    //$('#assignarea').show();
+                    $('#resultarea').show();
+                    $('#assignall').hide();
+                    //$('#filterarea').hide();
+                    $('#messagearea').hide();
+                }
+            } else {
+                $('#messagearea').show();
+                $('#assignarea').hide();
+                $('#filterarea').hide();
+                $('#resultarea').hide();
+            }
+
+            $('#violatorbox').autocomplete({
+                    source: '@Url.Action("GetViolators")'
+            });
+
+        });
+
+    </script>
+}

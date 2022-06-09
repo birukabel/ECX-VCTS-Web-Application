@@ -1,0 +1,88 @@
+﻿@model IEnumerable<ECX.VCTS.Models.ExchangeEmployeesModel>
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.Subtitle = "Manage Investigators";
+}
+
+<form>
+
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(m => m.FirstOrDefault().EmployeeName)
+                    </th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmployeeName)
+                        </td>
+                        @*<td>
+                            <a asp-action="ViolationManager/GetAssignmentForInvestigator/@item.EmployeeName">
+                                <b>View Assignments </b>
+                            </a>
+                        </td>*@
+                        <td>
+                            <button type="submit"
+                                    formaction="/ViolationManager/RemoveInvestigator/@item.EmployeeName"
+                                    formmethod="post" style="margin-right:300px;"
+                                    onclick="return confirm('Are you sure you want to remove the Investigator?');">
+                                <img src="~/images/img_rem_II.png" title="Remove Investigator" />
+                            </button>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+</form>
+
+<form>
+
+    <div id="addsection" hidden>
+
+        <label>Investigator Name:</label>
+        <input type="text" style="width:30%; border:1px solid lightblue; height:40px;" autofocus name="invname" />
+        <button type="submit" formaction="/ViolationManager/AddInvestigator" formmethod="post">
+            <img src="~/images/img_save.png" title="Save Investigator" onclick="return message('Investigator Added Successfully.');"/>
+        </button>
+
+    </div>
+
+</form>
+
+<button type="button" id="showadd" >
+    <img src="~/images/img_add_II.png" title="Add Investigator" />
+</button>
+
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#showadd').click(function () {
+                $('#addsection').show();
+                $('#showadd').hide();
+            });
+        })
+
+    </script>
+
+}
+

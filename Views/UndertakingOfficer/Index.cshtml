@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ECX.VCTS.ViewModels.UndertakingOfficerViewModel>
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.Subtitle = "Cases to Sign Compliance Undertaking";
+}
+
+
+<div id="zero" hidden>
+    <h2 style="text-align:center">No Cases Reported for Signing!!!</h2>
+</div>
+
+<div id="nonzero" hidden>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(m => m.FirstOrDefault().violationModel.ExchangeCenterName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.FirstOrDefault().violationModel.ViolatorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.FirstOrDefault().qualityModel.TotalNumberofBags)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.FirstOrDefault().qualityModel.NumberofAdultratedBags)
+                </th>
+                <th>
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.violationModel.ExchangeCenterName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.violationModel.ViolatorName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.qualityModel.TotalNumberofBags)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.qualityModel.NumberofAdultratedBags)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Review Case", "ReviewCase", new { id = item.qualityModel.QualityViolationsAttributeId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
+@section scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            if (@Model.ToList().Count > 0) {
+                $('#nonzero').show();
+                $('#zero').hide();
+            } else {
+                $('#nonzero').hide();
+                $('#zero').show();
+            }
+        });
+
+    </script>
+}
+

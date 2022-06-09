@@ -1,0 +1,22 @@
+﻿
+<div id="confirmDialog" title="Decision Passed">
+    <p>BCC Decisions Hve been Successfully Passed</p>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+       $(document).ready(function () {
+           $('#confirmDialog').dialog({
+               autoOpen: true,
+               Modal: true,
+               resizable: false,
+               buttons: {
+                   "Ok": function () {
+                       window.location = "/Home/";
+                   }
+               },
+           });
+
+    });
+    </script>
+}

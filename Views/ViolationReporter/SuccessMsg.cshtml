@@ -1,0 +1,23 @@
+﻿
+    
+<div id="confirmDialog" title="Send Report" >
+        <p>Your Report is Sent Successfully</p>
+    </div>
+
+@section scripts{
+   <script type="text/javascript">
+       $(document).ready(function () {
+           $('#confirmDialog').dialog({
+               autoOpen: true,
+               Modal: true,
+               resizable: false,
+               buttons: {
+                   "Ok": function () {
+                       window.location = "/Home/";
+                   }
+               },
+           });
+        
+    });
+   </script>
+ }

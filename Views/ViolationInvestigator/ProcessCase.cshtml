@@ -1,0 +1,201 @@
+﻿@model ECX.VCTS.ViewModels.AvailableQualityCasesViewModel
+@{
+    ViewData["Title"] = "ProcessCase";
+    ViewBag.Subtitle = "Quality Related Violation Cases with no Investigators Assigned";
+}
+
+<form asp-controller="ViolationInvestigator" asp-action="ProcessCase" method="post">
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="@Model.ViolationCase.ExchangeCenterName" class="control-label"></label>
+            <input asp-for="@Model.ViolationCase.ExchangeCenterName" class="form-control" readonly />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="@Model.ViolationCase.ViolatorName" class="control-label"></label>
+            <input asp-for="@Model.ViolationCase.ViolatorName" class="form-control" readonly />
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="@Model.ViolationCase.SupportingDocuments" class="control-label"></label>
+            <input asp-for="@Model.ViolationCase.SupportingDocuments" class="form-control" readonly />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="@Model.ViolationCase.ViolationSummary" class="control-label"></label>
+            <textarea asp-for="@Model.ViolationCase.ViolationSummary" class="form-control" readonly></textarea>
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.ArrivalDate" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.ArrivalDate" class="form-control" readonly />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.DispatchNumber" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.DispatchNumber" class="form-control" readonly />
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.DriverName" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.DriverName" class="form-control" readonly />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.GRNReference" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.GRNReference" class="form-control" readonly />
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.LaboratoryDecision" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.LaboratoryDecision" class="form-control" readonly />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.LabResultComment" class="control-label"></label>
+            <textarea asp-for="@Model.QualityCase.LabResultComment" class="form-control" readonly></textarea>
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.MemberRepresentativeName" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.MemberRepresentativeName" class="form-control" readonly />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.SamplerName" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.SamplerName" class="form-control" readonly />
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.NumberofAdultratedBags" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.NumberofAdultratedBags" class="form-control" readonly />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.TotalNumberofBags" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.TotalNumberofBags" class="form-control" readonly />
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.QualityGradeResult" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.QualityGradeResult" class="form-control" readonly />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.QualitySubCategory" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.QualitySubCategory" class="form-control" readonly />
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.SamplingInspectorName" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.SamplingInspectorName" class="form-control" readonly />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.SamplingTicketComment" class="control-label"></label>
+            <textarea asp-for="@Model.QualityCase.SamplingTicketComment" class="form-control" readonly></textarea>
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.TruckPlateNumber" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.TruckPlateNumber" class="form-control" readonly />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="@Model.QualityCase.TrailerPlateNumber" class="control-label"></label>
+            <input asp-for="@Model.QualityCase.TrailerPlateNumber" class="form-control" readonly />
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            @*<label asp-for="InvestigatorName" class="control-label"></label>*@
+            @*<input asp-for="InvestigatorName" type="text" name="InvestigatorName" id="InvestigatorName" class="form-control" placeholder="Investigator's Name Here..." />*@
+        </div>
+
+        <div class="col-md-2 accept-margin-left">
+            <input type="submit" value="Accept Case" name="accept" class="btn btn-primary" />
+        </div>
+        <div class="col-md-2 consider-margin-right">
+            <input type="submit" value="Consider Another" name="consider" class="btn btn-primary" />
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    @*<div class="row">
+
+            <div class="col-md-4"></div>
+            <div class="col-md-2 accept-margin-left"  >
+                <input type="submit" value="Accept Case" name="accept" class="btn btn-primary" />
+            </div>
+            <div class="col-md-2 consider-margin-right">
+                <input type="submit" value="Consider Another" name="consider" class="btn btn-primary" />
+            </div>
+            <div class="col-md-4"></div>
+
+        </div>*@
+
+</form>
+
+@section scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#InvestigatorName').autocomplete({
+                 source: '@Url.Action("GetInvestigators")'
+            });
+        });
+    </script>
+
+}

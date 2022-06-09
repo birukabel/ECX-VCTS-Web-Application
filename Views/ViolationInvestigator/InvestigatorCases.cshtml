@@ -1,0 +1,173 @@
+﻿@model ECX.VCTS.ViewModels.OwnedCasesViewModel
+@{
+    ViewData["Title"] = "InvestigatorCases";
+    ViewBag.Subtitle = "Cases you are Currently Assigned with and working on.";
+}
+
+<div id="zero" hidden>
+    <h2 style="text-align:center">No Owned Cases</h2>
+</div>
+
+<div id="nonzero">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ExchangeCenterName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ViolationSummary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ViolatorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ViolationType)
+                </th>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.OthersModel.Count > 0)
+            {
+                @foreach (var item in Model.OthersModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationSummary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @if (item.ViolationModel.CaseStatus == "Under Investigation")
+                            {
+                                @Html.ActionLink("Recommend on Case", "RecommendOnCase", new { id = item.ViolationModel.ViolationCaseId });
+                            }
+                            @if (item.ViolationModel.CaseStatus == "Preparing Charge")
+                            {
+                                @Html.ActionLink("Decide on Case", "DecideOnCase", new { id = item.ViolationModel.ViolationCaseId });
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+            @if (Model.QualityModel.Count > 0)
+            {
+                @foreach (var item in Model.QualityModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationSummary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @if (item.ViolationModel.CaseStatus == "Under Investigation")
+                            {
+                                @Html.ActionLink("Recommend on Case", "RecommendOnCase", new { id = item.ViolationModel.ViolationCaseId });
+                            }
+                            @if (item.ViolationModel.CaseStatus == "Preparing Charge")
+                            {
+                                @Html.ActionLink("Decide on Case", "DecideOnCase", new { id = item.ViolationModel.ViolationCaseId });
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+            @if (Model.SurveillanceModel.Count > 0)
+            {
+                @foreach (var item in Model.SurveillanceModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationSummary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @if (item.ViolationModel.CaseStatus == "Under Investigation")
+                            {
+                                @Html.ActionLink("Recommend on Case", "RecommendOnCase", new { id = item.ViolationModel.ViolationCaseId });
+                            }
+                            @if (item.ViolationModel.CaseStatus == "Preparing Charge")
+                            {
+                                @Html.ActionLink("Decide on Case", "DecideOnCase", new { id = item.ViolationModel.ViolationCaseId });
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+            @if (Model.TradeModel.Count > 0)
+            {
+                @foreach (var item in Model.TradeModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationSummary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @if (item.ViolationModel.CaseStatus == "Under Investigation")
+                            {
+                                @Html.ActionLink("Recommend on Case", "RecommendOnCase", new { id = item.ViolationModel.ViolationCaseId });
+                            }
+                            @if (item.ViolationModel.CaseStatus == "Preparing Charge")
+                            {
+                                @Html.ActionLink("Decide on Case", "DecideOnCase", new { id = item.ViolationModel.ViolationCaseId });
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            if (@Model.OthersModel.Count > 0 ||
+                @Model.QualityModel.Count > 0 ||
+                @Model.SurveillanceModel.Count > 0 ||
+                @Model.TradeModel.Count > 0) {
+                $('#nonzero').show();
+                $('#zero').hide();
+            } else {
+                $('#nonzero').hide();
+                $('#zero').show();
+            }
+        });
+
+    </script>
+ }

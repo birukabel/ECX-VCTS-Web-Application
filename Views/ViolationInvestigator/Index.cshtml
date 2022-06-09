@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ECX.VCTS.ViewModels.AvailableQualityCasesViewModel>
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.Subtitle = "Available Quality Related Violation Cases";
+}
+
+<div id="zero" hidden>
+    <h2 style="text-align:center">There are no Available Cases Reported!!!</h2>
+</div>
+
+<div id="nonzero" hidden>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>
+                    <label asp-for="@Model.FirstOrDefault().ViolationCase.ExchangeCenterName"></label>
+                </th>
+                <th>
+                    <label asp-for="@Model.FirstOrDefault().ViolationCase.ViolatorName"></label>
+                </th>
+                <th>
+                    <label asp-for="@Model.FirstOrDefault().QualityCase.LaboratoryDecision"></label>
+                </th>
+                <th>
+                    <label asp-for="@Model.FirstOrDefault().QualityCase.QualityGradeResult"></label>
+                </th>
+                <th>
+                    <label asp-for="@Model.FirstOrDefault().ViolationCase.ReportDate"></label>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ViolationCase.ExchangeCenterName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ViolationCase.ViolatorName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QualityCase.LaboratoryDecision)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QualityCase.QualityGradeResult)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ViolationCase.ReportDate)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Process Case", "ProcessCase", new { id = item.ViolationCase.ViolationCaseId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+
+
+@section scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            if (@Model.ToList().Count > 0) {
+                $('#nonzero').show();
+                $('#zero').hide();
+            } else {
+                $('#nonzero').hide();
+                $('#zero').show();
+            }
+        });
+
+    </script>
+}
+

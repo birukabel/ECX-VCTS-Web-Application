@@ -1,0 +1,271 @@
+﻿@model ECX.VCTS.ViewModels.SentBackCasesViewModel
+@{
+    ViewData["Title"] = "ReExamineCase";
+    ViewBag.Subtitle = "Modify and Report Case Back";
+}
+
+<form action="ReExamineCase" method="post" enctype="multipart/form-data">
+
+    <div class="row">
+        <div class="col-md-2">
+            <input asp-for="violationModel.ViolationCaseId" hidden />
+            <input asp-for="qualityModel.QualityViolationsAttributeId" hidden />
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.ArrivalDate" class="control-label"></label>
+                <input asp-for="qualityModel.ArrivalDate" class="form-control" />
+                <span asp-validation-for="qualityModel.ArrivalDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.GRNReference" class="control-label"></label>
+                <input asp-for="qualityModel.GRNReference" class="form-control" />
+                <span asp-validation-for="qualityModel.GRNReference" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="cok-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.DispatchNumber" class="control-label"></label>
+                <input asp-for="qualityModel.DispatchNumber" class="form-control" />
+                <span asp-validation-for="qualityModel.DispatchNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.MemberRepresentativeName" class="control-label"></label>
+                <input asp-for="qualityModel.MemberRepresentativeName" class="form-control" />
+                <span asp-validation-for="qualityModel.MemberRepresentativeName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.DriverName" class="control-label"></label>
+                <input asp-for="qualityModel.DriverName" class="form-control" />
+                <span asp-validation-for="qualityModel.DriverName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.TruckPlateNumber" class="control-label"></label>
+                <input asp-for="qualityModel.TruckPlateNumber" class="form-control" />
+                <span asp-validation-for="qualityModel.TruckPlateNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.TrailerPlateNumber" class="control-label"></label>
+                <input asp-for="qualityModel.TrailerPlateNumber" class="form-control" />
+                <span asp-validation-for="qualityModel.TrailerPlateNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.TotalNumberofBags" class="control-label"></label>
+                <input asp-for="qualityModel.TotalNumberofBags" class="form-control" />
+                <span asp-validation-for="qualityModel.TotalNumberofBags" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.NumberofAdultratedBags" class="control-label"></label>
+                <input asp-for="qualityModel.NumberofAdultratedBags" class="form-control" />
+                <span asp-validation-for="qualityModel.NumberofAdultratedBags" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.SamplerName" class="control-label"></label>
+                <input asp-for="qualityModel.SamplerName" class="form-control" />
+                <span asp-validation-for="qualityModel.SamplerName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.SamplingInspectorName" class="control-label"></label>
+                <input asp-for="qualityModel.SamplingInspectorName" class="form-control" />
+                <span asp-validation-for="qualityModel.SamplingInspectorName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.SamplingTicketComment" class="control-label"></label>
+                <input asp-for="qualityModel.SamplingTicketComment" class="form-control" />
+                <span asp-validation-for="qualityModel.SamplingTicketComment" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.LaboratoryDecision" class="control-label"></label>
+                <input asp-for="qualityModel.LaboratoryDecision" class="form-control" />
+                <span asp-validation-for="qualityModel.LaboratoryDecision" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.QualityGradeResult" class="control-label"></label>
+                <input asp-for="qualityModel.QualityGradeResult" class="form-control" />
+                <span asp-validation-for="qualityModel.QualityGradeResult" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.LabResultComment" class="control-label"></label>
+                <input asp-for="qualityModel.LabResultComment" class="form-control" />
+                <span asp-validation-for="qualityModel.LabResultComment" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.QualitySubCategory" class="control-label"></label>
+                <input asp-for="qualityModel.QualitySubCategory" class="form-control" />
+                <span asp-validation-for="qualityModel.QualitySubCategory" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="violationModel.CaseStatus" class="control-label"></label>
+                <input asp-for="violationModel.CaseStatus" class="form-control" />
+                <span asp-validation-for="violationModel.CaseStatus" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="violationModel.ViolationSummary" class="control-label"></label>
+                <input asp-for="violationModel.ViolationSummary" class="form-control" />
+                <span asp-validation-for="violationModel.ViolationSummary" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="coklmd-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="violationModel.SupportingDocuments" class="control-label"></label>
+                <input asp-for="violationModel.SupportingDocuments" class="form-control" />
+                <span asp-validation-for="violationModel.SupportingDocuments" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="violationModel.ExchangeCenterName" class="control-label"></label>
+                <input asp-for="violationModel.ExchangeCenterName" class="form-control" />
+                <span asp-validation-for="violationModel.ExchangeCenterName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="violationModel.ViolatorName" class="control-label"></label>
+                <input asp-for="violationModel.ViolatorName" class="form-control" />
+                <span asp-validation-for="violationModel.ViolatorName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.UndertakingOfficerRemark" class="control-label"></label>
+                <input asp-for="qualityModel.UndertakingOfficerRemark" class="form-control" />
+                <span asp-validation-for="qualityModel.UndertakingOfficerRemark" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="form-group">
+            <div class="col-md-4">
+                <label asp-for="EvidenceModifiable" class="control-label"></label>
+                <input type="checkbox" id="checkevidence" asp-for="EvidenceModifiable"
+                       class="form-control" name="modifiable" />
+            </div>
+        </div>
+        <div class="form-group" id="filecol" hidden>
+            <div class="col-md-4">
+                <div class="custom-file">
+                    <label asp-for="ChangedEvidence" class="control-label"></label>
+                    <input asp-for="ChangedEvidence" class="custom-file-input"
+                           id="file" name="file" aria-describedby="fileAddon" />
+                </div>
+                <span id="msg" asp-validation-for="ChangedEvidence" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-2" id="senddiv">
+            <input type="submit" value="Send" name="send Modified" id="sendbut" class="btn btn-primary" />
+        </div>
+        <div class="col-md-5"></div>
+    </div>
+
+</form>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input[type="checkbox"]').click(function () {
+                if ($(this).prop("checked") == true)
+                    $('#sendbut').hide();
+                    $('#filecol').show();
+            });
+            $('#file').change(function () {
+                var fileName = $(this).val();
+                if (validateFile(fileName) == true) {
+                    $('#sendbut').show();
+                } else {
+                    $('#sendbut').hide();
+                }
+            });
+        });
+    </script>
+}

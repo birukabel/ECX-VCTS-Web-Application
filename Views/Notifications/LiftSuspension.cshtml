@@ -1,0 +1,21 @@
+﻿<div id="confirmDialog" title="Suspension Lifted">
+    <p>Suspension is successfully Lifted!!!</p>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+       $(document).ready(function () {
+           $('#confirmDialog').dialog({
+               autoOpen: true,
+               Modal: true,
+               resizable: false,
+               buttons: {
+                   "Ok": function () {
+                       window.location = "/Notifications/index";
+                   }
+               },
+           });
+
+    });
+    </script>
+}

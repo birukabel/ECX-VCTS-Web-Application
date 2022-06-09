@@ -1,0 +1,767 @@
+﻿@model ECX.VCTS.ViewModels.ViolationReporterViewModel
+@{
+    ViewData["Title"] = "Report Violation";
+    ViewBag.Subtitle = "Fill Form and Send Violation Case";
+}
+
+<form asp-action="ReportViolation" asp-controller="ViolationReporter" method="post" enctype="multipart/form-data">
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="violationCases.ViolationType" class="control-label"></label>
+                    @Html.DropDownListFor(m => m.violationCases.ViolationType, Model.ViolationTypes,
+                   "Choose Violation Type", new { @id = "ReportViolationTypeName", @class = "form-control" })
+                    <span asp-validation-for="violationCases.ViolationType" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-lg-4" id="warehousecol">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.violationCases.ExchangeCenterName)
+                    @Html.DropDownListFor(m => m.violationCases.ExchangeCenterName, Model.Warehouses,
+                    "Choose center", new { @class = "form-control", @id = "warehouses" })
+                </div>
+            </div>
+            <div class="col-lg-4" id="centerscol" hidden>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.violationCases.ExchangeCenterName)
+                    @Html.DropDownListFor(m => m.violationCases.ExchangeCenterName, Model.Centers,
+                   "Choose center", new { @class = "form-control", @id = "centers" })
+                </div>
+            </div>
+
+            <div class="col-md-5"></div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="violationCases.ViolatorName" class="control-label"></label>
+                    <input asp-for="violationCases.ViolatorName" class="form-control allegedviolator" id="violatorname" />
+                    <span asp-validation-for="violationCases.ViolatorName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-3" id="tradeviolationdatediv">
+                <div class="form-group">
+                    <label asp-for="tradeModel.ViolationDate" class="control-label"></label>
+                    <input asp-for="tradeModel.ViolationDate" class="form-control" id="datepicker1" value="mm/dd/yyyy" />
+                    <span asp-validation-for="tradeModel.ViolationDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-3" id="surveilviolationdatediv" hidden>
+                <div class="form-group">
+                    <label asp-for="surveillanceModel.ViolationDate" class="control-label"></label>
+                    <input asp-for="surveillanceModel.ViolationDate" class="form-control" id="datepicker2" value="mm/dd/yyyy" />
+                    <span asp-validation-for="surveillanceModel.ViolationDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-3" id="arrivaldatediv" hidden>
+                <div class="form-group">
+                    <label asp-for="qualityModel.ArrivalDate" class="control-label"></label>
+                    <input asp-for="qualityModel.ArrivalDate" class="form-control" id="datepicker3" value="mm/dd/yyyy" />
+                    <span asp-validation-for="qualityModel.ArrivalDate" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="col-md-3" id="othersviolationdatediv" hidden>
+                <div class="form-group">
+                    <label asp-for="othersModel.ViolationDate" class="control-label"></label>
+                    <input asp-for="othersModel.ViolationDate" class="form-control" id="datepicker4" value="mm/dd/yyyy" />
+                    <span asp-validation-for="othersModel.ViolationDate" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="col-md-3" id="qualitysubcatdiv" hidden>
+
+                <div class="form-group">
+                    <label asp-for="qualityModel.QualitySubCategory" class="control-label"></label>
+                    @Html.DropDownListFor(m => m.qualityModel.QualitySubCategory, Model.QualitySubCategories,
+                   "Choose Quality Violation Sub Category", new { @id = "ReportQualitysubTypeName", @class = "form-control" })
+                    <span asp-validation-for="qualityModel.QualitySubCategory" class="text-danger"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        @* Qualty Type Violations Cases Registration Starts Here *@
+
+        <div id="qualityparametersdiv" hidden>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.GRNReference" class="control-label"></label>
+                        <input asp-for="qualityModel.GRNReference" class="form-control" id="grnreference" />
+                        <span asp-validation-for="qualityModel.GRNReference" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.DispatchNumber" class="control-label"></label>
+                        <input asp-for="qualityModel.DispatchNumber" class="form-control" id="dispatchnumber" />
+                        <span asp-validation-for="qualityModel.DispatchNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.MemberRepresentativeName" class="control-label"></label>
+                        <input asp-for="qualityModel.MemberRepresentativeName" class="form-control allegedviolator" />
+                        <span asp-validation-for="qualityModel.MemberRepresentativeName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.DriverName" class="control-label"></label>
+                        <input asp-for="qualityModel.DriverName" class="form-control" />
+                        <span asp-validation-for="qualityModel.DriverName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.TruckPlateNumber" class="control-label"></label>
+                        <input asp-for="qualityModel.TruckPlateNumber" class="form-control" id="truckplate" />
+                        <span asp-validation-for="qualityModel.TruckPlateNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.TrailerPlateNumber" class="control-label"></label>
+                        <input asp-for="qualityModel.TrailerPlateNumber" class="form-control" />
+                        <span asp-validation-for="qualityModel.TrailerPlateNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.TotalNumberofBags" class="control-label"></label>
+                        <input asp-for="qualityModel.TotalNumberofBags" class="form-control" id="numberofbags" />
+                        <span asp-validation-for="qualityModel.TotalNumberofBags" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.NumberofAdultratedBags" class="control-label"></label>
+                        <input asp-for="qualityModel.NumberofAdultratedBags" class="form-control" />
+                        <span asp-validation-for="qualityModel.NumberofAdultratedBags" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.SamplerName" class="control-label"></label>
+                        <input asp-for="qualityModel.SamplerName" class="form-control" id="samplername" />
+                        <span asp-validation-for="qualityModel.SamplerName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.SamplingInspectorName" class="control-label"></label>
+                        <input asp-for="qualityModel.SamplingInspectorName" class="form-control" id="samplinginspector" />
+                        <span asp-validation-for="qualityModel.SamplingInspectorName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.LaboratoryDecision" class="control-label"></label>
+                        <input asp-for="qualityModel.LaboratoryDecision" class="form-control" />
+                        <span asp-validation-for="qualityModel.LaboratoryDecision" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.LabResultComment" class="control-label"></label>
+                        <textarea asp-for="qualityModel.LabResultComment" cols="50" class="form-control"></textarea>
+                        <span asp-validation-for="qualityModel.LabResultComment" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.QualityGradeResult" class="control-label"></label>
+                        <input asp-for="qualityModel.QualityGradeResult" class="form-control" id="graderesult" />
+                        <span asp-validation-for="qualityModel.QualityGradeResult" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="qualityModel.SamplingTicketComment" class="control-label"></label>
+                        <textarea asp-for="qualityModel.SamplingTicketComment" cols="50" class="form-control"></textarea>
+                        <span asp-validation-for="qualityModel.SamplingTicketComment" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+        </div>
+
+        @* Qualty Type Violations Cases Registration EndsHere *@
+
+        @* Trade Related Violations Cases Registration Starts Here *@
+
+        <div id="tradeparametersdiv" hidden>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.SellTicketNumber" class="control-label"></label>
+                        <input asp-for="tradeModel.SellTicketNumber" class="form-control" />
+                        <span asp-validation-for="tradeModel.SellTicketNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.BuyTicketNumber" class="control-label"></label>
+                        <input asp-for="tradeModel.BuyTicketNumber" class="form-control" />
+                        <span asp-validation-for="tradeModel.BuyTicketNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.SellMemberName" class="control-label"></label>
+                        <input asp-for="tradeModel.SellMemberName" class="form-control allegedviolator" />
+                        <span asp-validation-for="tradeModel.SellMemberName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.SellClientName" class="control-label"></label>
+                        <input asp-for="tradeModel.SellClientName" class="form-control allegedviolator" />
+                        <span asp-validation-for="tradeModel.SellClientName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.BuyMemberName" class="control-label"></label>
+                        <input asp-for="tradeModel.BuyMemberName" class="form-control allegedviolator" />
+                        <span asp-validation-for="tradeModel.BuyMemberName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.BuyClientName" class="control-label"></label>
+                        <input asp-for="tradeModel.BuyClientName" class="form-control allegedviolator" />
+                        <span asp-validation-for="tradeModel.BuyClientName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.SellRepresentativeName" class="control-label"></label>
+                        <input asp-for="tradeModel.SellRepresentativeName" class="form-control allegedviolator" />
+                        <span asp-validation-for="tradeModel.SellRepresentativeName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.BuyRepresentativeName" class="control-label"></label>
+                        <input asp-for="tradeModel.BuyRepresentativeName" class="form-control allegedviolator" />
+                        <span asp-validation-for="tradeModel.BuyRepresentativeName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.Symbol" class="control-label"></label>
+                        <input asp-for="tradeModel.Symbol" class="form-control" />
+                        <span asp-validation-for="tradeModel.Symbol" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.ProductionYear" class="control-label"></label>
+                        <input asp-for="tradeModel.ProductionYear" class="form-control" />
+                        <span asp-validation-for="tradeModel.ProductionYear" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.Quantity" class="control-label"></label>
+                        <input asp-for="tradeModel.Quantity" class="form-control" />
+                        <span asp-validation-for="tradeModel.Quantity" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.TradePrice" class="control-label"></label>
+                        <input asp-for="tradeModel.TradePrice" class="form-control" />
+                        <span asp-validation-for="tradeModel.TradePrice" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.Description" class="control-label"></label>
+                        <textarea asp-for="tradeModel.Description" class="form-control"></textarea>
+                        <span asp-validation-for="tradeModel.Description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.FurtherExplanation" class="control-label"></label>
+                        <textarea asp-for="tradeModel.FurtherExplanation" cols="50" class="form-control"></textarea>
+                        <span asp-validation-for="tradeModel.FurtherExplanation" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.CancellationReason" class="control-label"></label>
+                        <textarea asp-for="tradeModel.CancellationReason" class="form-control"></textarea>
+                        <span asp-validation-for="tradeModel.CancellationReason" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="tradeModel.TradeType" class="control-label"></label>
+                        @Html.DropDownListFor(m => m.tradeModel.TradeType, Model.TradeTypes,
+                       "Choose Trade Type", new { @id = "tradetype", @class = "form-control" })
+                        <span asp-validation-for="tradeModel.TradeType" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+        </div>
+
+        @* Trade Related Violations Cases Registration Ends Here *@
+
+        @* Surveillance Related Violations Cases Registration Starts Here *@
+
+        <div id="survparametersdiv" hidden>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="surveillanceModel.Incident" class="control-label"></label>
+                        <input asp-for="surveillanceModel.Incident" class="form-control" />
+                        <span asp-validation-for="surveillanceModel.Incident" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="surveillanceModel.FurtherExplanation" class="control-label"></label>
+                        <textarea asp-for="surveillanceModel.FurtherExplanation" cols="50" class="form-control"></textarea>
+                        <span asp-validation-for="surveillanceModel.FurtherExplanation" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="surveillanceModel.TypeOfAlert" class="control-label"></label>
+                        <input asp-for="surveillanceModel.TypeOfAlert" class="form-control" />
+                        <span asp-validation-for="surveillanceModel.TypeOfAlert" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="surveillanceModel.FurtherComment" class="control-label"></label>
+                        <textarea asp-for="surveillanceModel.FurtherComment" cols="50" class="form-control"></textarea>
+                        <span asp-validation-for="surveillanceModel.FurtherComment" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="surveillanceModel.SellMemberName" class="control-label"></label>
+                        <input asp-for="surveillanceModel.SellMemberName" class="form-control allegedviolator" />
+                        <span asp-validation-for="surveillanceModel.SellMemberName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="surveillanceModel.BuyMemberName" class="control-label"></label>
+                        <input asp-for="surveillanceModel.BuyMemberName" class="form-control allegedviolator" />
+                        <span asp-validation-for="surveillanceModel.BuyMemberName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    @*<div class="form-group">
+                            <label asp-for="surveillanceModel.SupportingFile" class="control-label"></label>
+                            <input type="file" asp-for="surveillanceModel.SupportingFile" class="form-control" />
+                            <span asp-validation-for="surveillanceModel.SupportingFile" class="text-danger"></span>
+                        </div>*@
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="surveillanceModel.Witnesses" class="control-label"></label>
+                        <textarea asp-for="surveillanceModel.Witnesses" cols="50" class="form-control"></textarea>
+                        <span asp-validation-for="surveillanceModel.Witnesses" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+        </div>
+
+        <div id="otherparametersdiv" hidden>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="othersModel.Incident" class="control-label"></label>
+                        <input asp-for="othersModel.Incident" class="form-control" />
+                        <span asp-validation-for="othersModel.Incident" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="othersModel.FurtherComment" class="control-label"></label>
+                        <textarea asp-for="othersModel.FurtherComment" cols="50" class="form-control"></textarea>
+                        <span asp-validation-for="othersModel.FurtherComment" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    @*<div class="form-group">
+                            <label asp-for="othersModel.SupportingFile" class="control-label"></label>
+                            <input type="file" asp-for="othersModel.SupportingFile" class="form-control" />
+                            <span asp-validation-for="othersModel.SupportingFile" class="text-danger"></span>
+                        </div>*@
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="othersModel.Witnesses" class="control-label"></label>
+                        <textarea asp-for="othersModel.Witnesses" cols="50" class="form-control"></textarea>
+                        <span asp-validation-for="othersModel.Witnesses" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label asp-for="violationCases.ViolationSummary" class="control-label"></label>
+                    <textarea asp-for="violationCases.ViolationSummary" cols="50" class="form-control"></textarea>
+                    @*<span asp-validation-for="violationCases.ViolationSummary" class="text-danger"></span>*@
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="custom-file">
+                    <label asp-for="violationCases.SupportingFile" class="control-label"></label>
+                    <input asp-for="violationCases.SupportingFile"
+                           class="custom-file-input" name="supportingfile"
+                           id="file" aria-describedby="supportingfileAddon" >
+                    @*<label class="custom-file-label" for="supportingfile">Choose File...</label>*@
+                    <span id="msg" asp-validation-for="violationCases.SupportingFile" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-5">
+
+                @*<div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>*@
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-3"></div>
+            <div class="col-md-3" id="sendbut" >
+
+                <input type="submit" value="Send Case" class="btn btn-primary" asp-action="ReportViolation" id="btnsend"/>
+
+            </div>
+
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+
+        </div>
+
+    </div>
+
+
+</form>
+
+
+
+
+
+
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+                document.getElementById('warehouses').disabled = true;
+             var Extensions = ['png','jpeg', 'jpg','gif','docx', 'doc','xlsx', 'xls','txt','pdf','rar','zip'];
+                var text = $('#ReportViolationTypeName').find('option:selected').text();
+                if (text != "" && text != "Choose Violation Type")
+                    $('#sendbut').show();
+                if (text == "Quality") {
+                    $('#tradeviolationdatediv').hide();
+                    $('#surveilviolationdatediv').hide();
+                    $('#arrivaldatediv').show();
+                    $('#qualityparametersdiv').show();
+                    $('#qualitysubcatdiv').show();
+                    $('#tradeparametersdiv').hide();
+                    $('#survparametersdiv').hide();
+                    $('#othersviolationdatediv').hide();
+                    $('#otherparametersdiv').hide();
+                    document.getElementById('warehouses').disabled = false;
+                    $('#warehousecol').show();
+                    $('#centerscol').hide();
+                }
+                else if(text == "Trade"){
+                    $('#tradeviolationdatediv').show();
+                    $('#surveilviolationdatediv').hide();
+                    $('#arrivaldatediv').hide();
+                    $('#qualityparametersdiv').hide();
+                    $('#qualitysubcatdiv').hide();
+                    $('#tradeparametersdiv').show();
+                    $('#survparametersdiv').hide();
+                    $('#othersviolationdatediv').hide();
+                    $('#otherparametersdiv').hide();
+                    document.getElementById('warehouses').disabled = true;
+                    $('#warehousecol').hide();
+                    $('#centerscol').show();
+                }
+                else if(text == "Surveillance"){
+                    $('#tradeviolationdatediv').hide();
+                    $('#surveilviolationdatediv').show();
+                    $('#arrivaldatediv').hide();
+                    $('#qualityparametersdiv').hide();
+                    $('#qualitysubcatdiv').hide();
+                    $('#tradeparametersdiv').hide();
+                    $('#survparametersdiv').show();
+                    $('#othersviolationdatediv').hide();
+                    $('#otherparametersdiv').hide();
+                    document.getElementById('warehouses').disabled = true;
+                    $('#warehousecol').hide();
+                    $('#centerscol').show();
+                }
+                else if(text == "Other"){
+                    $('#tradeviolationdatediv').hide();
+                    $('#surveilviolationdatediv').hide();
+                    $('#arrivaldatediv').hide();
+                    $('#qualityparametersdiv').hide();
+                    $('#qualitysubcatdiv').hide();
+                    $('#tradeparametersdiv').hide();
+                    $('#survparametersdiv').hide();
+                    $('#othersviolationdatediv').show();
+                    $('#otherparametersdiv').show();
+                    document.getElementById('warehouses').disabled = true;
+                    $('#warehousecol').hide();
+                    $('#centerscol').show();
+                }
+
+                $('#ReportViolationTypeName').change(function () {
+                    if (this.value == "Trade") {
+                        $('#tradeviolationdatediv').show();
+                        $('#surveilviolationdatediv').hide();
+                        $('#arrivaldatediv').hide();
+                        $('#qualityparametersdiv').hide();
+                        $('#qualitysubcatdiv').hide();
+                        $('#tradeparametersdiv').show();
+                        $('#survparametersdiv').hide();
+                        $('#othersviolationdatediv').hide();
+                        $('#otherparametersdiv').hide();
+                        $('#sendbut').show();
+                        document.getElementById('warehouses').disabled = true;
+                        $('#warehousecol').hide();
+                        $('#centerscol').show();
+                    }
+                    else if (this.value == "Quality") {
+                         $('#tradeviolationdatediv').hide();
+                        $('#surveilviolationdatediv').hide();
+                        $('#arrivaldatediv').show();
+                        $('#qualityparametersdiv').show();
+                        $('#qualitysubcatdiv').show();
+                        $('#tradeparametersdiv').hide();
+                        $('#survparametersdiv').hide();
+                        $('#othersviolationdatediv').hide();
+                        $('#otherparametersdiv').hide();
+                        $('#sendbut').show();
+                        document.getElementById('warehouses').disabled = false;
+                        $('#warehousecol').show();
+                        $('#centerscol').hide();
+                    }
+                    else if(this.value == "Surveillance"){
+                        $('#tradeviolationdatediv').hide();
+                        $('#surveilviolationdatediv').show();
+                        $('#arrivaldatediv').hide();
+                        $('#qualityparametersdiv').hide();
+                        $('#qualitysubcatdiv').hide();
+                        $('#tradeparametersdiv').hide();
+                        $('#survparametersdiv').show();
+                        $('#othersviolationdatediv').hide();
+                        $('#otherparametersdiv').hide();
+                        $('#sendbut').show();
+                        document.getElementById('warehouses').disabled = true;
+                        $('#warehousecol').hide();
+                        $('#centerscol').show();
+                    }
+                    else if (this.value == "Other") {
+                        $('#tradeviolationdatediv').hide();
+                        $('#surveilviolationdatediv').hide();
+                        $('#arrivaldatediv').hide();
+                        $('#qualityparametersdiv').hide();
+                        $('#qualitysubcatdiv').hide();
+                        $('#tradeparametersdiv').hide();
+                        $('#survparametersdiv').hide();
+                        $('#othersviolationdatediv').show();
+                        $('#otherparametersdiv').show();
+                        $('#sendbut').show();
+                        document.getElementById('warehouses').disabled = true;
+                        $('#warehousecol').hide();
+                        $('#centerscol').show();
+                    }
+                });
+
+                $('#centername').autocomplete({
+                    source: '@Url.Action("GetCenters")'
+                });
+
+            $('#datepicker1').datepicker({
+                dateFormat: "mm/dd/yy",
+                maxDate: 0
+            });
+
+            $('#datepicker2').datepicker({
+                dateFormat: "mm/dd/yy",
+                maxDate: 0
+            });
+
+            $('#datepicker3').datepicker({
+                dateFormat: "mm/dd/yy",
+                maxDate: 0
+            });
+
+            $('#datepicker4').datepicker({
+                dateFormat: "mm/dd/yy",
+                maxDate: 0
+            });
+
+            $('.allegedviolator').autocomplete({
+                    source: '@Url.Action("GetViolators")'
+            });
+
+            $('#file').change(function () {
+                var fileName = $(this).val();
+                if (validateFile(fileName) == true) {
+                    $('#sendbut').show();
+                } else {
+                    $('#sendbut').hide();
+                }
+            });
+
+            $('#grnreference').autocomplete({
+                source: '@Url.Action("GetAllGRNReferences")'
+            });
+
+            $('#grnreference').change(function () {
+                var str = $(this).val();
+                fillFormWithGRN('@Url.Action("GetAllGRNData", "ViolationReporter")', str);
+            });
+
+        });
+
+    </script>
+
+}

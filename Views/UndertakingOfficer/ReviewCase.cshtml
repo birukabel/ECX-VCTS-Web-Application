@@ -1,0 +1,371 @@
+﻿@model ECX.VCTS.ViewModels.UndertakingOfficerViewModel
+
+@{
+    ViewData["Title"] = "ReviewCase";
+    ViewBag.Subtitle = "Review Case and Sign it OR Send it Back";
+}
+
+
+<form asp-controller="UndertakingOfficer" asp-action="ReviewCase" method="post" enctype="multipart/form-data">
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.ArrivalDate" class="control-label"></label>
+                <input asp-for="qualityModel.ArrivalDate" class="form-control" />
+                <span asp-validation-for="qualityModel.ArrivalDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.GRNReference" class="control-label"></label>
+                <input asp-for="qualityModel.GRNReference" class="form-control" />
+                <span asp-validation-for="qualityModel.GRNReference" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="cok-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.DispatchNumber" class="control-label"></label>
+                <input asp-for="qualityModel.DispatchNumber" class="form-control" />
+                <span asp-validation-for="qualityModel.DispatchNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.MemberRepresentativeName" class="control-label"></label>
+                <input asp-for="qualityModel.MemberRepresentativeName" class="form-control" />
+                <span asp-validation-for="qualityModel.MemberRepresentativeName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.DriverName" class="control-label"></label>
+                <input asp-for="qualityModel.DriverName" class="form-control" />
+                <span asp-validation-for="qualityModel.DriverName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.TruckPlateNumber" class="control-label"></label>
+                <input asp-for="qualityModel.TruckPlateNumber" class="form-control" />
+                <span asp-validation-for="qualityModel.TruckPlateNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.TrailerPlateNumber" class="control-label"></label>
+                <input asp-for="qualityModel.TrailerPlateNumber" class="form-control" />
+                <span asp-validation-for="qualityModel.TrailerPlateNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.TotalNumberofBags" class="control-label"></label>
+                <input asp-for="qualityModel.TotalNumberofBags" class="form-control" />
+                <span asp-validation-for="qualityModel.TotalNumberofBags" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.NumberofAdultratedBags" class="control-label"></label>
+                <input asp-for="qualityModel.NumberofAdultratedBags" class="form-control" />
+                <span asp-validation-for="qualityModel.NumberofAdultratedBags" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.SamplerName" class="control-label"></label>
+                <input asp-for="qualityModel.SamplerName" class="form-control" />
+                <span asp-validation-for="qualityModel.SamplerName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.SamplingInspectorName" class="control-label"></label>
+                <input asp-for="qualityModel.SamplingInspectorName" class="form-control" />
+                <span asp-validation-for="qualityModel.SamplingInspectorName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.SamplingTicketComment" class="control-label"></label>
+                <input asp-for="qualityModel.SamplingTicketComment" class="form-control" />
+                <span asp-validation-for="qualityModel.SamplingTicketComment" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.LaboratoryDecision" class="control-label"></label>
+                <input asp-for="qualityModel.LaboratoryDecision" class="form-control" />
+                <span asp-validation-for="qualityModel.LaboratoryDecision" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.QualityGradeResult" class="control-label"></label>
+                <input asp-for="qualityModel.QualityGradeResult" class="form-control" />
+                <span asp-validation-for="qualityModel.QualityGradeResult" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.LabResultComment" class="control-label"></label>
+                <input asp-for="qualityModel.LabResultComment" class="form-control" />
+                <span asp-validation-for="qualityModel.LabResultComment" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="qualityModel.QualitySubCategory" class="control-label"></label>
+                <input asp-for="qualityModel.QualitySubCategory" class="form-control" />
+                <span asp-validation-for="qualityModel.QualitySubCategory" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="violationModel.CaseStatus" class="control-label"></label>
+                <input asp-for="violationModel.CaseStatus" class="form-control" />
+                <span asp-validation-for="violationModel.CaseStatus" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="violationModel.ViolationSummary" class="control-label"></label>
+                <input asp-for="violationModel.ViolationSummary" class="form-control" />
+                <span asp-validation-for="violationModel.ViolationSummary" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="coklmd-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="violationModel.SupportingDocuments" class="control-label"></label>
+                <input asp-for="violationModel.SupportingDocuments" class="form-control" />
+                <span asp-validation-for="violationModel.SupportingDocuments" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="violationModel.ExchangeCenterName" class="control-label"></label>
+                <input asp-for="violationModel.ExchangeCenterName" class="form-control" />
+                <span asp-validation-for="violationModel.ExchangeCenterName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="violationModel.ViolatorName" class="control-label"></label>
+                <input asp-for="violationModel.ViolatorName" class="form-control" />
+                <span asp-validation-for="violationModel.ViolatorName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label asp-for="officerModel.ActionChosen" class="control-label"></label>
+            <select asp-for="officerModel.ActionChosen" id="dpd" autofocus style="width:100%;height:40px; border:1px solid lightskyblue;">
+                <option value="">Choose One Action</option>
+                <option value="sign">Sign Document</option>
+                <option value="unsign">Charge with out Signing</option>
+                <option value="send">Send Back to Reporter</option>
+            </select>
+            <span asp-validation-for="officerModel.ActionChosen" class="text-danger"></span>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+    <div class="row" id="buttonsenddiv" hidden>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label asp-for="qualityModel.UndertakingOfficerRemark" class="control-label"></label>
+                <textarea asp-for="qualityModel.UndertakingOfficerRemark" class="form-control" cols="75" style="border:1px solid lightskyblue;"></textarea>
+                <span asp-validation-for="qualityModel.UndertakingOfficerRemark" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <div id="buttonsigndiv" hidden>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="officerModel.PreparedBy" class="control-label"></label>
+                <input asp-for="officerModel.PreparedBy" class="form-control" />
+                <span asp-validation-for="officerModel.PreparedBy" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="officerModel.SignedDate" class="control-label"></label>
+                <input asp-for="officerModel.SignedDate" class="form-control" id="signdate" value="mm/dd/yyyy" />
+                <span asp-validation-for="officerModel.SignedDate" class="text-danger"></span>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+    </div>
+
+    <div id="buttonunsigndiv" hidden>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="officerModel.PreparedBy" class="control-label"></label>
+                <input asp-for="officerModel.PreparedBy" class="form-control" />
+                <span asp-validation-for="officerModel.PreparedBy" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="officerModel.SignedDate" class="control-label"></label>
+                <input asp-for="officerModel.SignedDate" class="form-control" id="signdate" value="mm/dd/yyyy" disabled />
+                <span asp-validation-for="officerModel.SignedDate" class="text-danger"></span>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6 custom-file">
+            <label asp-for="UploadedDocument" class="control-label"></label>
+            <input asp-for="UploadedDocument"
+                   class="custom-file-input form-control" aria-describedby="UploadedDocumentAddon"
+                   name="UploadedDocument" id="file" />
+            <span id="msg" asp-validation-for="UploadedDocument" class="text-danger"></span>
+        </div>
+        @*<div class="col-md-2"></div>*@
+    </div>
+
+
+    <div class="row" id="buttondiv">
+        <div class="col-md-2"></div>
+        <div class="col-md-2" id="downdiv">
+            <input type="submit" value="Download Evidence" name="down" class="btn btn-primary" />
+        </div>
+        <div class="col-md-2" id="signdiv" hidden>
+            <input type="submit" value="Sign Document" name="sign" class="btn btn-primary" />
+        </div>
+        <div class="col-md-2" id="prodiv" hidden>
+            <input type="submit" value="Charge with out Signing" name="unsign" class="btn btn-primary" />
+        </div>
+        <div class="col-md-2" id="senddiv" hidden>
+            <input type="submit" value="Send Back" name="send" class="btn btn-primary" />
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+</form>
+
+
+@section scripts{
+    <script type="text/javascript">
+            $(document).ready(function () {
+                var Extensions = ['png','jpeg', 'jpg','gif','docx', 'doc','xlsx', 'xls','txt','pdf','rar','zip'];
+                $('#dpd').change(function () {
+                    var txt = $("#dpd option:selected").text();
+                    if (txt == "Send Back to Reporter") {
+                        $('#buttonsenddiv').show();
+                        $('#buttonsenddiv').focus();
+                        $('#senddiv').show();
+                        $('#signdiv').hide();
+                        $('#buttonsigndiv').hide();
+                        $('#prodiv').hide();
+                        $('#downdiv').hide();
+                        $('#buttonunsigndiv').hide();
+                    }
+                    else if (txt == "Sign Document") {
+                        $('#buttonsenddiv').hide();
+                        $('#senddiv').hide();
+                        $('#signdiv').show();
+                        $('#buttonsigndiv').show();
+                        $('#buttonsigndiv').focus();
+                        $('#prodiv').hide();
+                        $('#downdiv').hide();
+                        $('#buttonunsigndiv').hide();
+                    }
+                    else if (txt == "Charge with out Signing") {
+                        $('#buttonsenddiv').hide();
+                        $('#senddiv').hide();
+                        $('#signdiv').hide();
+                        $('#buttonsigndiv').hide();
+                        $('#downdiv').hide();
+                        $('#buttonunsigndiv').show();
+                        $('#buttonunsigndiv').focus();
+                        $('#prodiv').show();
+                    }
+                    else {
+                        $('#buttonsenddiv').hide();
+                        $('#bittonsenddiv').hide();
+                        $('#signdiv').hide();
+                        $('#buttonsigndiv').hide();
+                        $('#prodiv').hide();
+                        $('#buttonunsigndiv').hide();
+                        $('#downdiv').show();
+                    }
+                });
+
+                $('#signdate').datepicker({
+                    dateFormat: "mm/dd/yy",
+                    maxDate: 0
+                });
+
+                $('#file').change(function () {
+                    var fileName = $(this).val();
+                    if (validateFile(fileName) == true) {
+                    $('#buttondiv').show();
+                } else {
+                    $('#buttondiv').hide();
+                }
+            });
+
+            });
+    </script>
+
+
+}

@@ -1,0 +1,256 @@
+﻿@model ECX.VCTS.ViewModels.VCTSReportsViewModel
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.Subtitle = "Reports Generation Page";
+}
+
+<div id="filterarea" style="border-bottom:solid 1px #FDC006;">
+    <form asp-action="GetData" method="get">
+        <h3 style="text-align:center"><u>Supply Your Filters Here</u></h3>
+        <div id="violationtypesection">
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    @Html.LabelFor(m => m.ViolationType)
+                    @Html.DropDownListFor(m => m.ViolationType, Model.ViolationTypes,
+                   "All Types", new { @class = "form-control", @id = "typechosen" })
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+
+        <div id="centersection" class="topmar">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4" id="warehousecol">
+                    @Html.LabelFor(m => m.ExchangeCenterName)
+                    @Html.DropDownListFor(m => m.ExchangeCenterName, Model.Warehouses,
+                   "Choose center", new { @class = "form-control", @id = "warehouses" })
+                </div>
+                <div class="col-lg-4" id="centerscol" hidden>
+                    @Html.LabelFor(m => m.ExchangeCenterName)
+                    @Html.DropDownListFor(m => m.ExchangeCenterName, Model.Centers,
+                   "Choose center", new { @class = "form-control", @id = "centers" })
+                </div>
+                <div class="col-lg-4">
+                    @Html.LabelFor(m => m.CaseStatus)
+                    @Html.DropDownListFor(m => m.CaseStatus, Model.StatusTypes,
+                   "All Statuses", new { @class = "form-control", @id = "statuschosen" })
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+
+        <div id="violatorsection" class="topmar">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4">
+                    <label asp-for="ViolatorName" class="control-label"></label>
+                    <input asp-for="ViolatorName" type="text" class="form-control" id="violatorname" />
+                    @*@Html.LabelFor(m => m.ViolatorName)
+                        @Html.TextBox("ViolatorName", null, new { id = "violatorname" })*@
+                </div>
+                <div class="col-lg-4">
+                    <label asp-for="InvestigatorName" class="control-label"></label>
+                    <input asp-for="InvestigatorName" class="form-control" type="text" id="investigatorname" />
+                    @*@Html.LabelFor(m => m.InvestigatorName)
+                        @Html.TextBox("InvestigatorName", null, new { id = "investigatorname" })*@
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+
+        <div id="datesection" class="topmar">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="DateFrom" class="control-label"></label>
+                        <input asp-for="DateFrom" style="border: 2px solid lightblue" class="form-control" id="datefromval" />
+                        <span asp-validation-for="DateFrom" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="DateTo" class="control-label"></label>
+                        <input asp-for="DateTo" style="border: 2px solid lightblue" class="form-control" id="datetoval" />
+                        <span asp-validation-for="DateTo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="submit" value="Get Data" class="btn btn-primary" style="margin-top:10px;" />
+                </div>
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+
+    </form>
+</div>
+
+<div id="messagearea" style="text-align:center;" hidden>
+    <h2>No Results Found</h2>
+</div>
+
+<div id="resultarea" hidden>
+    <table class="table" style="border:solid 1px black;">
+
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ExchangeCenterName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ViolatorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ViolationType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.CaseStatus)
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @if (Model.OthersModel.Count > 0)
+            {
+                foreach (var item in Model.OthersModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.CaseStatus)
+                        </td>
+                    </tr>
+                }
+            }
+
+            @if (Model.QualityModel.Count > 0)
+            {
+                foreach (var item in Model.QualityModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.CaseStatus)
+                        </td>
+                    </tr>
+                }
+            }
+
+            @if (Model.SurveillanceModel.Count > 0)
+            {
+                foreach (var item in Model.SurveillanceModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.CaseStatus)
+                        </td>
+                    </tr>
+                }
+            }
+
+            @if (Model.TradeModel.Count > 0)
+            {
+                foreach (var item in Model.TradeModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.CaseStatus)
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+
+    </table>
+</div>
+
+<div id="generatearea">
+    <form asp-action="GenerateReport">
+    </form>
+</div>
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            document.getElementById('warehouses').disabled = true;
+            $('#datefromval').datepicker({
+                dateFormat: "mm/dd/yy",
+                maxDate: 0
+            });
+
+            $('#datetoval').datepicker({
+                dateFormat: "mm/dd/yy",
+                maxDate: 0
+            });
+
+             $('#investigatorname').autocomplete({
+                    source: '@Url.Action("GetInvestigators")'
+             });
+
+            $('#violatorname').autocomplete({
+                    source: '@Url.Action("GetViolators")'
+            });
+            $('#typechosen').change(function () {
+                if ($(this).val() == "Quality") {
+                    document.getElementById('warehouses').disabled = false;
+                    $('#warehousecol').show();
+                    $('#centerscol').hide();
+                } else {
+                    document.getElementById('warehouses').disabled = true;
+                    $('#warehousecol').hide();
+                    $('#centerscol').show();
+                }
+
+            });
+        });
+
+    </script>
+
+}

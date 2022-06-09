@@ -1,0 +1,22 @@
+﻿
+<div id="confirmDialog" title="Send to Reporter">
+    <p>Case is Successfully Sent Back to Reporter</p>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+       $(document).ready(function () {
+           $('#confirmDialog').dialog({
+               autoOpen: true,
+               Modal: true,
+               resizable: false,
+               buttons: {
+                   "Ok": function () {
+                       window.location = "/Home/";
+                   }
+               },
+           });
+
+    });
+    </script>
+}

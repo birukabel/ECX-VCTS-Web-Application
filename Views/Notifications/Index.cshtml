@@ -1,0 +1,747 @@
+﻿@model ECX.VCTS.ViewModels.NotificationsViewModel
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.Subtitle = "Your Notifications";
+}
+
+
+
+<div class="container-fluid">
+    <table class="table" style="border:solid 2px #FDC006;">
+        <tr class="notify">
+            <td id="overduecases" hidden>
+                <a style="color:green;" href="#" id="overduecaseslnk">
+                    Overdue Cases <span class="badge">@Model.OverdueCaseCount</span>
+                </a>
+            </td>
+            <td id="extendedcases" hidden>
+                <a style="color:magenta" href="#" id="extendedcaseslnk">
+                    Extended Cases <span class="badge">@Model.ExtendedCasesCount</span>
+                </a>
+            </td>
+            @* Additional Starts Here *@
+
+            <td id="penalty" hidden>
+                <a style="color:blue" href="#" id="penaltylnk">
+                    Penalized Cases <span class="badge">@Model.PenalizedCasesCount</span>
+                </a>
+            </td>
+
+            @* Additional Ends Here *@
+            <td id="overduepenalty" hidden>
+                <a style="color:red" href="#" id="overduepenaltylnk">
+                    Overdue Penalized Cases <span class="badge">@Model.OverduePenaltyCount</span>
+                </a>
+            </td>
+            <td id="firstnotice" hidden>
+                <a style="color:green" href="#" id="firstnoticelnk">
+                    First Notice Cases <span class="badge">@Model.FirstNoticeCount</span>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td id="secondnotice" hidden>
+                <a style="color:magenta" href="#" id="secondnoticelnk">
+                    Second Notice Cases <span class="badge">@Model.SecondNoticeCount</span>
+                </a>
+            </td>
+            <td id="unenforced" hidden>
+                <a style="color:red" href="#" id="unenforcedlnk">
+                    Unenforced Cases <span class="badge">@Model.UnenforcedOverduePenalizedList.Count</span>
+                </a>
+            </td>
+            <td id="suspensions" hidden>
+                <a style="color:green" href="#" id="suspensionslnk">
+                    Suspensions To Lift <span class="badge">@Model.SuspensionsToLiftCount</span>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<form>
+
+    <div id="overduecasesarea" hidden>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table" id="myDataTablesec">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.AssignDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.BCCDecisionSummary)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ViolatorName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DateDiffOC)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OverdueCasesList)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AssignDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BCCDecisionSummary)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ViolatorName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DateDiffOC) Days
+                                </td>
+                                <td>
+                                    <input type="submit" formaction="ExtendOverdueCase/@item.ViolationCaseId"
+                                           formmethod="post" name="extend" id="extendbutt" class="btn btn-primary" value="Extend Case" />
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+<form>
+    <div id="extendedcasesarea" hidden>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.AssignDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.BCCDecisionSummary)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ViolatorName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DateDiffOC)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.ExtendedCasesList)
+                        {
+                            <tr>
+                                <td id="c1">
+                                    @Html.DisplayFor(modelItem => item.AssignDate)
+                                </td>
+                                <td id="c2">
+                                    @Html.DisplayFor(modelItem => item.BCCDecisionSummary)
+                                </td>
+                                <td id="c3">
+                                    @Html.DisplayFor(modelItem => item.ViolatorName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DateDiffOC) Days
+                                </td>
+                                <td>
+                                    <input type="submit" value="Reassign Case" id="extendbutt" formmethod="get" name="reassign" id="reassbutt" class="btn btn-primary"
+                                           formaction="ReassignExtendedCase/@item.ViolationCaseId" />
+
+                                    @*</input>*@
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+
+@* Additional Area for Penalized List Starts Here *@
+
+<form>
+
+    <div id="penaltyarea" hidden>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table" id="myDataTable">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DecisionPassedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.BCCDecisionSummary)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ViolatorName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DateDiffPen)
+                            </th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.PenalizedCasesList)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DecisionPassedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BCCDecisionSummary)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ViolatorName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DateDiffPen) Days
+                                </td>
+                                <td>
+                                    <div>
+                                        @*<input type="submit" formaction="Notifications/PostFirstWarning/@item.ViolationCaseId"
+                                               formmethod="post" name="warn" id="warnbutt" value="Post First Warning" />*@
+                                        @*<b>Post First Warning</b>
+                                            </input><b>|</b>*@
+                                        <input type="submit" formaction="SettlePayment/@item.ViolationCaseId"
+                                               formmethod="post" name="settle" id="settlebutt" value="Settle Payment" />
+                                        @*<b>Settle Payment</b>
+                                            </input>*@
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+
+@* Additional Area for Penalized List Ends Here *@
+
+<form>
+
+    <div id="overduepenaltyarea" hidden>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table" id="myDataTable">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DecisionPassedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.BCCDecisionSummary)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ViolatorName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DateDiffPen)
+                            </th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OverduePenalizedCasesList)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DecisionPassedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BCCDecisionSummary)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ViolatorName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DateDiffPen) Days
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="submit" formaction="PostFirstWarning/@item.ViolationCaseId"
+                                               formmethod="post" name="warn" id="warnbutt" value="Post First Warning" />
+                                        @*<b>Post First Warning</b>
+                                            </input><b>|</b>*@
+                                        <input type="submit" formaction="SettlePayment/@item.ViolationCaseId"
+                                               formmethod="post" name="settle" id="settlebutt" value="Settle Payment" />
+                                        @*<b>Settle Payment</b>
+                                            </input>*@
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+
+
+<form>
+
+    <div id="firstnoticearea" hidden>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DecisionPassedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.BCCDecisionSummary)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ViolatorName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DateDiffPen)
+                            </th>
+                            <th>Action</th>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.PenalizedFirstNoticeList)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DecisionPassedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BCCDecisionSummary)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ViolatorName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DateDiffPen) Days
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="submit" formaction="PostSecondWarning/@item.ViolationCaseId"
+                                               formmethod="post" name="warn" id="warnbutt" value="Post Second Warning" />
+                                        @*<b>Post Second Warning</b>
+                                            </button><b>OR</b>*@
+                                        <input type="submit" formaction="SettlePayment/@item.ViolationCaseId"
+                                               formmethod="post" name="settle" id="settlebutt" value="Settle Payment" />
+                                        @*<b>Settle Payment</b>
+                                            </button>*@
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+
+<form>
+
+    <div id="secondnoticearea" hidden>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DecisionPassedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.BCCDecisionSummary)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ViolatorName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DateDiffPen)
+                            </th>
+                            <th>Action</th>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.PenalizedSecondNoticeList)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DecisionPassedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BCCDecisionSummary)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ViolatorName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DateDiffPen) Days
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="submit" formaction="ClaimPenaltyUnenforced/@item.ViolationCaseId"
+                                               formmethod="post" name="warn" id="warnbutt" value="Claim Unenforced" />
+                                        @*<b>Claim Unenforced</b>
+                                            </button><b>OR</b>*@
+                                        <input type="submit" formaction="SettlePayment/@item.ViolationCaseId"
+                                               formmethod="post" name="settle" id="settlebutt" value="Settle Payment" />
+                                        @*<b>Settle Payment</b>
+                                            </button>*@
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+
+<form>
+
+    <div id="suspensionsarea" hidden>
+        <div class="row">
+            <div class="col-md-12">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DecisionPassedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.BCCDecisionSummary)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ViolatorName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.InvestigatorName)
+                            </th>
+                            <th></th>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.SuspensionsToLiftCasesList)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DecisionPassedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BCCDecisionSummary)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ViolatorName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.InvestigatorName)
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="submit" formaction="LiftSuspension/@item.ViolationCaseId"
+                                               formmethod="post" name="warn" id="warnbutt" value="Lift Suspension" />
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</form>
+<form>
+
+    <div id="unenforcedarea" hidden></div>
+
+</form>
+
+
+@section scripts{
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+            if (@Model.OverdueCaseCount > 0) {
+                $('#overduecases').show();
+                $('#overduecaseslnk').click(function () {
+                    $('#overduecases').hide();
+                    $('#overduecasesarea').show();
+                    $('#extendedcasesarea').hide();
+                    $('#overduepenaltyarea').hide();
+                    $('#firstnoticearea').hide();
+                    $('#secondnoticearea').hide();
+                    $('#unenforcedarea').hide();
+                    $('#suspensionsarea').hide();
+                    $('#penaltyarea').hide();
+
+                    @*if (@Model.OverdueCaseCount > 0)
+                        $('#overduecases').show();*@
+                    if (@Model.OverduePenaltyCount > 0)
+                        $('#overduepenalty').show();
+                    if (@Model.FirstNoticeCount > 0)
+                        $('#firstnotice').show();
+                    if (@Model.SecondNoticeCount > 0)
+                        $('#secondnotice').show();
+                    if (@Model.UnenforcedCount > 0)
+                        $('#unenforced').show();
+                    if (@Model.SuspensionsToLiftCount > 0)
+                        $('#suspensions').show();
+                    if (@Model.PenalizedCasesCount > 0)
+                        $('#penalty').show();
+                });
+            }
+
+            if(@Model.ExtendedCasesCount > 0) {
+                $('#extendedcases').show();
+                $('#extendedcaseslnk').click(function () {
+                    $('#extendedcasesarea').show();
+                    $('#extendedcases').hide();
+                    $('#overduecasesarea').hide();
+                    $('#overduepenaltyarea').hide();
+                    $('#firstnoticearea').hide();
+                    $('#secondnoticearea').hide();
+                    $('#unenforcedarea').hide();
+                    $('#suspensionsarea').hide();
+                    $('#penaltyarea').hide();
+
+                    if (@Model.OverdueCaseCount > 0)
+                        $('#overduecases').show();
+                    if (@Model.OverduePenaltyCount > 0)
+                        $('#overduepenalty').show();
+                    if (@Model.FirstNoticeCount > 0)
+                        $('#firstnotice').show();
+                    if (@Model.SecondNoticeCount > 0)
+                        $('#secondnotice').show();
+                    if (@Model.UnenforcedCount > 0)
+                        $('#unenforced').show();
+                    if (@Model.SuspensionsToLiftCount > 0)
+                        $('#suspensions').show();
+                    if (@Model.PenalizedCasesCount > 0)
+                        $('#penalty').show();
+                });
+            }
+
+            @* Additional Starts Here*@
+
+            if (@Model.PenalizedCasesCount > 0) {
+                $('#penalty').show();
+                $('#penaltylnk').click(function () {
+                    $('#penalty').hide();
+                    $('#penaltyarea').show();
+                    $('#overduecasesarea').hide();
+                    $('#firstnoticearea').hide();
+                    $('#secondnoticearea').hide();
+                    $('#unenforcedarea').hide();
+                    $('#suspensionsarea').hide();
+                    $('#extendedcasesarea').hide();
+                    $('#overduepenaltyarea').hide();
+
+
+                    if (@Model.ExtendedCasesCount > 0)
+                        $('#extendedcases').show();
+                    if (@Model.OverdueCaseCount > 0)
+                        $('#overduecases').show();
+                    if (@Model.FirstNoticeCount > 0)
+                        $('#firstnotice').show();
+                    if (@Model.SecondNoticeCount > 0)
+                        $('#secondnotice').show();
+                    if (@Model.UnenforcedCount > 0)
+                        $('#unenforced').show();
+                    if (@Model.SuspensionsToLiftCount > 0)
+                        $('#suspensions').show();
+                    @*if (@Model.PenalizedCasesCount > 0)
+                        $('#penalty').show();*@
+                });
+            }
+
+            @* Additional Ends Here *@
+
+            if (@Model.OverduePenaltyCount > 0) {
+                $('#overduepenalty').show();
+                $('#overduepenaltylnk').click(function () {
+                    $('#overduepenalty').hide();
+                    $('#overduepenaltyarea').show();
+                    $('#overduecasesarea').hide();
+                    $('#firstnoticearea').hide();
+                    $('#secondnoticearea').hide();
+                    $('#unenforcedarea').hide();
+                    $('#suspensionsarea').hide();
+                    $('#extendedcasesarea').hide();
+                    $('#penaltyarea').hide();
+
+
+                    if (@Model.ExtendedCasesCount > 0)
+                        $('#extendedcases').show();
+                    if (@Model.OverdueCaseCount > 0)
+                        $('#overduecases').show();
+                    if (@Model.FirstNoticeCount > 0)
+                        $('#firstnotice').show();
+                    if (@Model.SecondNoticeCount > 0)
+                        $('#secondnotice').show();
+                    if (@Model.UnenforcedCount > 0)
+                        $('#unenforced').show();
+                    if (@Model.SuspensionsToLiftCount > 0)
+                        $('#suspensions').show();
+                    if (@Model.PenalizedCasesCount > 0)
+                        $('#penalty').show();
+                });
+            }
+
+            if (@Model.FirstNoticeCount > 0) {
+                $('#firstnotice').show();
+                $('#firstnoticelnk').click(function () {
+                    $('#firstnoticearea').show();
+
+                    $('#firstnotice').hide();
+                    $('#overduecasesarea').hide();
+                    $('#extendedcasesarea').hide();
+                    $('#overduepenaltyarea').hide();
+                    $('#secondnoticearea').hide();
+                    $('#unenforcedarea').hide();
+                    $('#suspensionsarea').hide();
+                    $('#penaltyarea').hide();
+
+                     if (@Model.ExtendedCasesCount > 0)
+                        $('#extendedcases').show();
+                    if (@Model.OverdueCaseCount > 0)
+                        $('#overduecases').show();
+                    if (@Model.OverduePenaltyCount > 0)
+                        $('#overduepenalty').show();
+                    if (@Model.SecondNoticeCount > 0)
+                        $('#secondnotice').show();
+                    if (@Model.UnenforcedCount > 0)
+                        $('#unenforced').show();
+                    if (@Model.SuspensionsToLiftCount > 0)
+                        $('#suspensions').show();
+                    if (@Model.PenalizedCasesCount > 0)
+                        $('#penalty').show();
+                });
+            }
+
+            if (@Model.SecondNoticeCount > 0) {
+                $('#secondnotice').show();
+                $('#secondnoticelnk').click(function () {
+                    $('#secondnoticearea').show();
+
+                    $('#secondnotice').hide();
+                    $('#overduecasesarea').hide();
+                    $('#extendedcasesarea').hide();
+                    $('#overduepenaltyarea').hide();
+                    $('#firstnoticearea').hide();
+                    $('#unenforcedarea').hide();
+                    $('#suspensionsarea').hide();
+                    $('#penaltyarea').hide();
+
+                     if (@Model.ExtendedCasesCount > 0)
+                        $('#extendedcases').show();
+                    if (@Model.OverdueCaseCount > 0)
+                        $('#overduecases').show();
+                    if (@Model.OverduePenaltyCount > 0)
+                        $('#overduepenalty').show();
+                    if (@Model.FirstNoticeCount > 0)
+                        $('#firstnotice').show();
+                    if (@Model.UnenforcedCount > 0)
+                        $('#unenforced').show();
+                    if (@Model.SuspensionsToLiftCount > 0)
+                        $('#suspensions').show();
+                    if (@Model.PenalizedCasesCount > 0)
+                        $('#penalty').show();
+                });
+            }
+
+            if (@Model.UnenforcedCount> 0) {
+                $('#unenforced').show();
+                $('#unenforcedlnk').click(function () {
+                    $('#unenforcedarea').show();
+
+                    $('#unenforced').hide();
+                    $('#overduecasesarea').hide();
+                    $('#extendedcasesarea').hide();
+                    $('#overduepenaltyarea').hide();
+                    $('#firstnoticearea').hide();
+                    $('#secondnoticearea').hide();
+                    $('#suspensionsarea').hide();
+                    $('#penaltyarea').hide();
+
+                     if (@Model.ExtendedCasesCount > 0)
+                        $('#extendedcases').show();
+                    if (@Model.OverdueCaseCount > 0)
+                        $('#overduecases').show();
+                    if (@Model.OverduePenaltyCount > 0)
+                        $('#overduepenalty').show();
+                    if (@Model.FirstNoticeCount > 0)
+                        $('#firstnotice').show();
+                    if (@Model.SecondNoticeCount > 0)
+                        $('#secondnotice').show();
+                    if (@Model.SuspensionsToLiftCount > 0)
+                        $('#suspensions').show();
+                    if (@Model.PenalizedCasesCount > 0)
+                        $('#penalty').show();
+                });
+            }
+
+            if (@Model.SuspensionsToLiftCount > 0) {
+                $('#suspensions').show();
+                $('#suspensionslnk').click(function () {
+                    $('#suspensionsarea').show();
+
+                    $('#suspensions').hide();
+                    $('#overduecasesarea').hide();
+                    $('#extendedcasesarea').hide();
+                    $('#overduepenaltyarea').hide();
+                    $('#firstnoticearea').hide();
+                    $('#secondnoticearea').hide();
+                    $('#unenforcedarea').hide();
+                    $('#penaltyarea').hide();
+
+                    if (@Model.ExtendedCasesCount > 0)
+                        $('#extendedcases').show();
+                    if (@Model.OverdueCaseCount > 0)
+                        $('#overduecases').show();
+                    if (@Model.OverduePenaltyCount > 0)
+                        $('#overduepenalty').show();
+                    if (@Model.FirstNoticeCount > 0)
+                        $('#firstnotice').show();
+                    if (@Model.SecondNoticeCount > 0)
+                        $('#secondnotice').show();
+                    if (@Model.UnenforcedCount > 0)
+                        $('#unenforced').show();
+                    if (@Model.PenalizedCasesCount > 0)
+                        $('#penalty').show();
+                });
+            }
+
+            $('#txtSearch').autocomplete({
+                source: '@Url.Action("GetEmployees")'
+            });
+
+        });
+
+    </script>
+}

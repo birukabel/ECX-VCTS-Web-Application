@@ -1,0 +1,148 @@
+﻿@model IEnumerable<ECX.VCTS.ViewModels.BCCCasesViewModel>
+
+    @{
+    ViewData["Title"] = "DecideSelectedBCCCases";
+    }
+
+    <div id="messagearea" style="text-align:center;" hidden>
+        <h2>No Results Found</h2>
+    </div>
+
+    @*<form asp-action="DecideonSelectedCases" method="post">*@
+
+    <div id="resultarea" hidden>
+
+        <div style="text-align:center;">
+            <h2>List of Cases for BCC Decision</h2>
+        </div>
+
+        <table class="table" id="tblcases">
+
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(m => m.ViolationCenterName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(m => m.ViolationSummary)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(m => m.DecisionViolatorName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(m => m.DecisionViolationType)
+                    </th>
+                    <th><b>Select</b></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ViolationCenterName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ViolationSummary)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DecisionViolatorName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DecisionViolationType)
+                    </td>
+                    <td>
+                        @Html.CheckBoxFor(modelItem => item.IsActive)
+                    </td>
+                    <td hidden>
+                        @Html.DisplayFor(modelItem => item.ViolationCaseId)
+                    </td>
+                </tr>
+            }
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <hr style="border-top:solid 2px #FDC006;" />
+    <div id="buttonarea">
+        <div class="row">
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2" id="PassDecisionButton">
+                <button type="submit" class="btn btn-primary" id="btnpass">
+                    Pass Decision
+                </button>
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+
+    @section scripts{
+
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $("body").on("click", "#btnpass", function () {
+                //Loop through the Table rows and build a JSON array.
+
+                var CasesList = new Array();
+
+                $("#tblcases TBODY TR").each(function () {
+
+                    if ($(this).find("input").is(":checked")) {
+
+                        var row = $(this);
+                        var BCCCasesViewModel = {};
+
+                        BCCCasesViewModel.ViolationCenterName = row.find("TD").eq(0).html().trimLeft().trimRight();
+                        BCCCasesViewModel.ViolationSummary = row.find("TD").eq(1).html().trimLeft().trimRight();
+                        BCCCasesViewModel.DecisionViolatorName = row.find("TD").eq(2).html().trimLeft().trimRight();
+                        BCCCasesViewModel.DecisionViolationType = row.find("TD").eq(3).html().trimLeft().trimRight();
+                        BCCCasesViewModel.IsActive = row.find("TD").eq(4).val();
+                        BCCCasesViewModel.ViolationCaseId = row.find("TD").eq(5).html().trimLeft().trimRight();
+
+                        CasesList.push(BCCCasesViewModel);
+                    }
+                    //alert(CasesList);
+
+                });
+
+                //Send the JSON array to Controller using AJAX.
+
+                $.ajax({
+                    type: "POST",
+                    url: "/ViolationManager/DecideonSelectedCases",
+                    data: { CasesList },
+                    dataType: "text",
+                    success: function (msg) {
+                        window.location.href = "/ViolationManager/GetSelectedListforBCC";
+                    },
+                    error: function (req, status, error) {
+                        console.log(error);
+                    }
+                });
+
+
+            });
+
+
+
+                if (@Model.Count() > 0) {
+                    $('#resultarea').show();
+                    $('#buttonarea').show();
+                    $('#messagearea').hide();
+                } else {
+                    $('#resultarea').show();
+                    $('#buttonarea').hide();
+                    $('#messagearea').show();
+                }
+
+         });
+
+        </script>
+}

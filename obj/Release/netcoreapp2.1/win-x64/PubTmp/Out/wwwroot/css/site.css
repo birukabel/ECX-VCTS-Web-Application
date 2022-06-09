@@ -1,0 +1,184 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.spanlink {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+    white-space: nowrap;
+    margin-left: -1em;
+    /*list-style-type:none;*/
+}
+
+.bigspanlink {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    margin: 10px 0px 2px 55px;
+}
+
+/*.wrapper {
+    margin: 20px 15px 2px 55px;
+}*/
+
+#myheader {
+    background-color: #adba83;
+    /*background-image: url(/images/bg.png);*/
+    background-image: url(&quot;rgb(173,186,131)&quot;
+    width: 100%;
+    margin: 1px 0px 2px 55px;
+    height: auto;
+}
+
+#first-col {
+    margin-left: -20px;
+    padding-right: 60px;
+}
+
+#header-text {
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    color: #FFF;
+    padding: 5px;
+}
+
+.navbar {
+    width: 20%;
+}
+
+.content-wrapper {
+    width: auto;
+    margin-top: 0;
+    position: absolute;
+    display: inline;
+}
+
+input[type=submit] {
+    background-color: #adba83;
+    color: #fff;
+    cursor: pointer;
+}
+
+button[type=submit] {
+    background-color: #adba83;
+    color: #fff;
+    cursor: pointer;
+}
+
+#navbarbgd {
+    background-color: #FDC00D;
+    /*background-image: url(/images/bg.png);*/
+    background-image: url(&quot;rgb(173,186,131)&quot;
+    );
+}
+
+#accordionSidebar {
+    text-align: center;
+    padding: 0;
+}
+
+.accept-margin-left {
+    margin-left: 5em;
+    margin-top: 2em;
+}
+
+.consider-margin-right {
+    margin-left: -4em;
+    margin-top: 2em;
+}
+
+.topmar {
+    margin-top: 1em;
+    border-bottom: solid 1px #FDC006;
+    padding: 10px;
+}
+
+.notification-header {
+    text-align: center;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.sp-al-rgt {
+    margin-left: 2em;
+}
+
+.spanlink span {
+    margin-left: auto;
+}
+
+.btnremove {
+    background: url(/images/remove_II.png);
+}
+
+/*#overduecaseslnk{    
+    display:inline-block;
+}*/
+
+/*.nav-link{
+    line-height: 10px;
+    padding:0;
+}*/
+
+/*.wrapper {
+    display: block;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* top layer 
+    z-index: 9999;
+}*/

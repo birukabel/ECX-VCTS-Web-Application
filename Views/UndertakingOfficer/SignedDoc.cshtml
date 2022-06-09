@@ -1,0 +1,22 @@
+﻿
+<div id="confirmDialog" title="Signed Document">
+    <p>You have Successfully Signed and Sent the Undertaking Document</p>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+       $(document).ready(function () {
+           $('#confirmDialog').dialog({
+               autoOpen: true,
+               Modal: true,
+               resizable: false,
+               buttons: {
+                   "Ok": function () {
+                       window.location = "/Home/";
+                   }
+               },
+           });
+
+    });
+    </script>
+}

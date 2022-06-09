@@ -1,0 +1,237 @@
+﻿@model ECX.VCTS.ViewModels.BCCCasesListClass
+@{
+    ViewData["Title"] = "DecideonSelectedCases";
+}
+
+<div id="resultarea">
+
+    <div style="text-align:center;">
+        <h2>List of Cases for BCC Decision</h2>
+    </div>
+
+    <table class="table" id="tblcases">
+
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(m => m.BCCCasesList.FirstOrDefault().ViolationCenterName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.BCCCasesList.FirstOrDefault().ViolationSummary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.BCCCasesList.FirstOrDefault().DecisionViolatorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.BCCCasesList.FirstOrDefault().DecisionViolationType)
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model.BCCCasesList)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ViolationCenterName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ViolationSummary)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DecisionViolatorName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DecisionViolationType)
+                    </td>
+                    <td hidden>
+                        @Html.DisplayFor(modelItem => item.ViolationCaseId)
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+</div>
+
+
+<div id="penaltyarea" style="border-top:solid 2px #FDC006; border-bottom:solid 2px #FDC006;" hidden>
+
+    <div class="row">
+
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(m => m.DecisionPenaltyType)
+                @Html.DropDownListFor(m => m.DecisionPenaltyType, Model.PenaltyTypes,
+                "Choose Penalty Type", new { @class = "form-control", @id = "penaltytype", @name = "penaltytype" })
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+
+    </div>
+
+</div>
+
+<form action="PassBCCSelectedDecision" method="post">
+
+    <div id="penaltydecisionarea">
+
+        <div class="row" id="financial" hidden>
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="@Model.DecisionAmountPenalized" class="control-label"></label>
+                    <input asp-for="@Model.DecisionAmountPenalized" class="form-control"
+                           style="border: 2px solid lightblue" id="financial" name="financial" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="@Model.DecisionPassedDate" class="control-label"></label>
+                    <input asp-for="@Model.DecisionPassedDate" class="form-control" id="effDate"
+                           style="border: 2px solid lightblue" value="mm/dd/yyyy" name="effectivedate" />
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row" id="suspension" hidden>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label asp-for="@Model.SuspensionBeginingDate" class="control-label"></label>
+                    <input asp-for="@Model.SuspensionBeginingDate" class="form-control" id="beginingdate"
+                           style="border: 2px solid lightblue" value="mm/dd/yyyy" name="begindate" />
+                    <span asp-validation-for="@Model.SuspensionBeginingDate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label asp-for="@Model.SuspensionEndingDate" class="control-label"></label>
+                    <input asp-for="@Model.SuspensionEndingDate" class="form-control" id="endingdate"
+                           style="border: 2px solid lightblue" value="mm/dd/yyyy" name="enddate" />
+                    <span asp-validation-for="@Model.SuspensionEndingDate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+
+        <div class="row" id="termination" hidden>
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label asp-for="@Model.TerminationDate" class="control-label"></label>
+                    <input asp-for="@Model.TerminationDate" class="form-control" style="border: 2px solid lightblue"
+                           value="mm/dd/yyyy" id="terminationdate" name="terminationdate" />
+                    <span asp-validation-for="@Model.TerminationDate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+
+        <div class="row" id="bccsum" hidden>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="form-group">
+                    <label asp-for="@Model.BCCSummary" class="control-label"></label>
+                    <textarea asp-for="@Model.BCCSummary" class="form-control" id="bccsum" name="bccsum"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+
+
+
+
+    <hr style="border-top:solid 2px #FDC006;" />
+    <div id="buttonarea">
+        <div class="row">
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2" id="PassDecisionButton">
+                <input type="submit" class="btn btn-primary"
+                       value="Decide On Selected Cases" id="btnpass" />
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+    </div>
+
+</form>
+
+
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            if (@Model.BCCCasesList.Count() > 0) {
+                $('#resultarea').show();
+                $('#messagearea').hide();
+                $('#penaltyarea').show();
+            } else {
+                $('#messagearea').show();
+                $('#resultarea').hide();
+                $('#penaltyarea').hide();
+            }
+
+            $('#penaltytype').change(function () {
+                var chosen = $('#penaltytype').find('option:selected').text();
+                if (chosen == "Financial") {
+                    $('#financial').show();
+                    $('#buttonarea').show();
+                    $('#suspension').hide();
+                    $('#termination').hide();
+                    $('#bccsum').show();
+                } else if (chosen == "Suspension") {
+                    $('#financial').hide();
+                    $('#buttonarea').show();
+                    $('#suspension').show();
+                    $('#termination').hide();
+                    $('#bccsum').show();
+                } else if (chosen == "Termination") {
+                    $('#financial').hide();
+                    $('#buttonarea').show();
+                    $('#suspension').hide();
+                    $('#termination').show();
+                    $('#bccsum').show();
+                } else if (chosen == "Dismissed") {
+                    $('#financial').hide();
+                    $('#buttonarea').show();
+                    $('#suspension').hide();
+                    $('#termination').hide();
+                    $('#bccsum').show();
+                }
+                else if (chosen == "Choose Penalty Type" || chosen == "") {
+                    $('#penaltydecisionarea').hide();
+                    $('#buttonarea').hide();
+                    $('#bccsum').hide();
+                }
+                $('#terminationdate').datepicker({
+                    dateFormat: "mm/dd/yy",
+                    minDate: 0
+                });
+                $('#beginingdate').datepicker({
+                    dateFormat: "mm/dd/yy",
+                    minDate: 0
+                });
+                $('#endingdate').datepicker({
+                    dateFormat: "mm/dd/yy",
+                    minDate: 0
+                });
+                $('#effDate').datepicker({
+                    dateFormat: "mm/dd/yy",
+                    maxDate: 0
+                });
+
+                $('.violatorboxcls').autocomplete({
+                    source: '@Url.Action("GetViolators")'
+                });
+            });
+        });
+
+    </script>
+
+ }

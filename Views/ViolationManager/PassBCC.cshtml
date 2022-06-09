@@ -1,0 +1,92 @@
+﻿@model IEnumerable<ECX.VCTS.ViewModels.BCCCasesViewModel>
+
+@{
+    ViewData["Title"] = "Pass BCC Decision";
+    ViewBag.Subtitle = "List of Cases Recommended for BCC Decision";
+}
+
+<div id="zero" hidden>
+    <h2 style="text-align:center">No Cases Ready for Decision!!!</h2>
+</div>
+
+<div id="nonzero">
+    <form asp-action="DecideSelectedBCCCases" asp-controller="ViolationManager" method="get">
+
+        <table class="table">
+            <tbody>
+                <tr id="searchcol">
+                    <td align="center">
+                        <b>Alleged Violator Name:</b>
+                        <input class="violatorboxcls" type="text" id="violatorbox"
+                               placeholder="Alleged Violator Name" name="violatorname" ViolatorName />
+                        <input type="submit" value="Search" id="srchbtn" class="btn btn-primary" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+
+    <div id="resultarea">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(m => m.FirstOrDefault().ViolationCenterName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(m => m.FirstOrDefault().ViolationSummary)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(m => m.FirstOrDefault().DecisionViolatorName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(m => m.FirstOrDefault().DecisionViolationType)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationSummary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DecisionViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DecisionViolationType)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+@section scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            if (@Model.ToList().Count > 0) {
+                $('#nonzero').show();
+                $('#zero').hide();
+            } else {
+                $('#nonzero').hide();
+                $('#zero').show();
+            }
+        });
+
+    </script>
+}
+
+
+

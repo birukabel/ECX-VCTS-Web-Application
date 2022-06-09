@@ -1,0 +1,519 @@
+﻿@model ECX.VCTS.ViewModels.InvestigatorDecisionsViewModel
+@{
+    ViewData["Title"] = "DecideOnCase";
+    ViewBag.Subtitle = "Summerize and Decide on Case";
+}
+
+
+<form asp-action="DecideOnCase" enctype="multipart/form-data">
+
+    @if (Model.ViolationType == "Other")
+    {
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Others.ViolationModel.ExchangeCenterName" class="control-label"></label>
+                <input asp-for="Others.ViolationModel.ExchangeCenterName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Others.ViolationModel.ViolatorName" class="control-label"></label>
+                <input asp-for="Others.ViolationModel.ViolatorName" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Others.ViolationModel.SupportingDocuments" class="control-label"></label>
+                <input asp-for="Others.ViolationModel.SupportingDocuments" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Others.ViolationModel.ViolationSummary" class="control-label"></label>
+                <textarea asp-for="Others.ViolationModel.ViolationSummary" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Others.ViolationModel.ExchangeCenterName" class="control-label"></label>
+                <input asp-for="Others.ViolationModel.ExchangeCenterName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Others.ViolationModel.ViolatorName" class="control-label"></label>
+                <input asp-for="Others.ViolationModel.ViolatorName" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Others.ViolationModel.SupportingDocuments" class="control-label"></label>
+                <input asp-for="Others.ViolationModel.SupportingDocuments" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Others.ViolationModel.ViolationSummary" class="control-label"></label>
+                <textarea asp-for="Others.ViolationModel.ViolationSummary" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Others.OthersModel.Incident" class="control-label"></label>
+                <input asp-for="Others.OthersModel.Incident" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Others.OthersModel.ViolationDate" class="control-label"></label>
+                <input asp-for="Others.OthersModel.ViolationDate" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Others.OthersModel.Witnesses" class="control-label"></label>
+                <input asp-for="Others.OthersModel.Witnesses" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Others.OthersModel.ViolationDate" class="control-label"></label>
+                <input asp-for="Others.OthersModel.ViolationDate" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Others.OthersModel.FurtherComment" class="control-label"></label>
+                <textarea asp-for="Others.OthersModel.FurtherComment" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Others.OthersModel.Witnesses" class="control-label"></label>
+                <textarea asp-for="Others.OthersModel.Witnesses" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+    }
+
+    @if (Model.ViolationType == "Quality")
+    {
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Quality.ViolationModel.ExchangeCenterName" class="control-label"></label>
+                <input asp-for="Quality.ViolationModel.ExchangeCenterName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Quality.ViolationModel.ViolatorName" class="control-label"></label>
+                <input asp-for="Quality.ViolationModel.ViolatorName" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Quality.ViolationModel.SupportingDocuments" class="control-label"></label>
+                <input asp-for="Quality.ViolationModel.SupportingDocuments" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Quality.ViolationModel.ViolationSummary" class="control-label"></label>
+                <textarea asp-for="Quality.ViolationModel.ViolationSummary" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.ArrivalDate" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.ArrivalDate" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.DispatchNumber" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.DispatchNumber" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.DriverName" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.DriverName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.GRNReference" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.GRNReference" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.LaboratoryDecision" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.LaboratoryDecision" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.LabResultComment" class="control-label"></label>
+                <textarea asp-for="Quality.QualityModel.LabResultComment" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.MemberRepresentativeName" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.MemberRepresentativeName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.SamplerName" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.SamplerName" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.NumberofAdultratedBags" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.NumberofAdultratedBags" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.TotalNumberofBags" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.TotalNumberofBags" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.QualityGradeResult" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.QualityGradeResult" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.QualitySubCategory" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.QualitySubCategory" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.SamplingInspectorName" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.SamplingInspectorName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.SamplingTicketComment" class="control-label"></label>
+                <textarea asp-for="Quality.QualityModel.SamplingTicketComment" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.TruckPlateNumber" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.TruckPlateNumber" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Quality.QualityModel.TrailerPlateNumber" class="control-label"></label>
+                <input asp-for="Quality.QualityModel.TrailerPlateNumber" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+
+
+
+    }
+
+    @if (Model.ViolationType == "Surveillance")
+    {
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.ViolationModel.ExchangeCenterName" class="control-label"></label>
+                <input asp-for="Surveillance.ViolationModel.ExchangeCenterName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.ViolationModel.ViolatorName" class="control-label"></label>
+                <input asp-for="Surveillance.ViolationModel.ViolatorName" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.ViolationModel.SupportingDocuments" class="control-label"></label>
+                <input asp-for="Surveillance.ViolationModel.SupportingDocuments" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.ViolationModel.ViolationSummary" class="control-label"></label>
+                <textarea asp-for="Surveillance.ViolationModel.ViolationSummary" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.SurveillanceModel.BuyMemberName" class="control-label"></label>
+                <input asp-for="Surveillance.SurveillanceModel.BuyMemberName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.SurveillanceModel.SellMemberName" class="control-label"></label>
+                <input asp-for="Surveillance.SurveillanceModel.SellMemberName" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.SurveillanceModel.Evidences" class="control-label"></label>
+                <input asp-for="Surveillance.SurveillanceModel.Evidences" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.SurveillanceModel.Witnesses" class="control-label"></label>
+                <textarea asp-for="Surveillance.SurveillanceModel.Witnesses" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.SurveillanceModel.TypeOfAlert" class="control-label"></label>
+                <input asp-for="Surveillance.SurveillanceModel.TypeOfAlert" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.SurveillanceModel.FurtherComment" class="control-label"></label>
+                <textarea asp-for="Surveillance.SurveillanceModel.FurtherComment" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.SurveillanceModel.ViolationDate" class="control-label"></label>
+                <input asp-for="Surveillance.SurveillanceModel.ViolationDate" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Surveillance.SurveillanceModel.FurtherExplanation" class="control-label"></label>
+                <textarea asp-for="Surveillance.SurveillanceModel.FurtherExplanation" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+
+    }
+
+    @if (Model.ViolationType == "Trade")
+    {
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Trade.ViolationModel.ExchangeCenterName" class="control-label"></label>
+                <input asp-for="Trade.ViolationModel.ExchangeCenterName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Trade.ViolationModel.ViolatorName" class="control-label"></label>
+                <input asp-for="Trade.ViolationModel.ViolatorName" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Trade.ViolationModel.SupportingDocuments" class="control-label"></label>
+                <input asp-for="Trade.ViolationModel.SupportingDocuments" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Trade.ViolationModel.ViolationSummary" class="control-label"></label>
+                <textarea asp-for="Trade.ViolationModel.ViolationSummary" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.BuyClientName" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.BuyClientName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.BuyMemberName" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.BuyMemberName" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.BuyRepresentativeName" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.BuyRepresentativeName" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.SellRepresentativeName" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.SellRepresentativeName" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.BuyTicketNumber" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.BuyTicketNumber" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.SellTicketNumber" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.SellTicketNumber" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.ProductionYear" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.ProductionYear" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.Quantity" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.Quantity" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.ViolationDate" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.ViolationDate" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.WareHouse" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.WareHouse" class="form-control" readonly />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.TradePrice" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.TradePrice" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.Description" class="control-label"></label>
+                <textarea asp-for="Trade.TradeModel.Description" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.TradeType" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.TradeType" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.CancellationReason" class="control-label"></label>
+                <textarea asp-for="Trade.TradeModel.CancellationReason" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.Symbol" class="control-label"></label>
+                <input asp-for="Trade.TradeModel.Symbol" class="form-control" readonly />
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Trade.TradeModel.FurtherExplanation" class="control-label"></label>
+                <textarea asp-for="Trade.TradeModel.FurtherExplanation" class="form-control" readonly></textarea>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label asp-for="InvestigatorDecisionSummary" class="control-label"></label>
+            <textarea asp-for="InvestigatorDecisionSummary" class="form-control"
+                      autofocus placeholder="Your Decision Summary Here ..." name="decisionarea"></textarea>
+            <span asp-validation-for="InvestigatorDecisionSummary" class="text-danger"></span>
+
+        </div>
+        <div class="custom-file col-md-4">
+            <label asp-for="InvestigatorEvidence" class="control-label"></label>
+            <input class="custom-file-input form-control" asp-for="InvestigatorEvidence"
+                   name="file" id="file" aria-describedby="fileAddon"/>
+            <span id="msg" asp-validation-for="InvestigatorEvidence" class="text-danger"></span>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row" id="buttonarea" >
+        <div class="col-md-4"></div>
+        <div class="col-md-2 accept-margin-left consider-margin-right" id="dwnbut">
+            <input type="submit" value="Download as Word Doc." name="down" class="btn btn-primary" />
+        </div>
+        <div class="col-md-2 accept-margin-left" id="sntbut" hidden>
+            @*<button type="button" asp-controller="ViolationInvestigator" asp-action="DecideOnCase"
+            onclick="myfun();" >Send To BCC</button>*@
+            <input type="submit" value="Send To BCC" name="sent" class="btn btn-primary" />
+        </div>
+        <div class="col-md-2 consider-margin-right" id="drpbut" hidden>
+            <input type="submit" value="Suggest To Drop" name="drop" class="btn btn-primary"  />
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+</form>
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+             $('#file').change(function () {
+                var fileName = $(this).val();
+                if (validateFile(fileName) == true) {
+                    $('#sntbut').show();
+                    $('#drpbut').show();
+                    //$('#dwnbut').hide();
+                } else {
+                    $('#drpbut').hide();
+                    $('#sntbut').hide();
+                    $('#dwnbut').show();
+                }
+            });
+        });
+
+    </script>
+
+}

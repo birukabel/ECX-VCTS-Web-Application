@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Ethiopia Commodity Exchange</title>
+
+    @*<environment include="Development">*@
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/site.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    @*</environment>
+        <environment exclude="Development">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+                  crossorigin="anonymous"
+                  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+        </environment>*@
+
+    @if (IsSectionDefined("styles"))
+    {
+        @RenderSection("styles", true);
+    }
+
+</head>
+<body>
+    <div class="container " id="myheader">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="~/images/ecxlogo.png" id="first-col" />
+            </div>
+            <div class="col-md-8" id="header-text">
+                <h2>Violation Cases Tracking Application</h2>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+
+        <nav class="navbar p-0" id="navbarbgd">
+            <div class="container-fluid d-flex flex-column p-0">
+
+                <div class="bigspanlink">
+                    <span>Menu</span>
+                </div>
+
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav" id="accordionSidebar">
+                    <li class="nav-item" role="presentation">
+
+                        <h3 style="text-align:center;color:green;"><b><u>Reporters</u></b></h3>
+                        <a class="nav-link" asp-controller="ViolationReporter" asp-action="ReportViolation"><span class="spanlink">Report Case</span></a>
+                        <a class="nav-link" asp-controller="ViolationReporter" asp-action="SentBackCases"><span class="spanlink">Sent Backs</span></a>
+
+                        <h3 style="text-align:center;color:green;"><b><u>Undertakers</u></b></h3>
+                        <a class="nav-link" asp-controller="UndertakingOfficer" asp-action="Index"><span class="spanlink">Undertaking</span></a>
+
+                        <h3 style="text-align:center;color:green;"><b><u>Investigators</u></b></h3>
+                        <a class="nav-link" asp-controller="ViolationInvestigator" asp-action="Index"><span class="spanlink">Available Cases</span></a>
+                        <a class="nav-link" asp-controller="ViolationInvestigator" asp-action="InvestigatorCases"><span class="spanlink">Owned Cases</span></a>
+
+                        <h3 style="text-align:center;color:green;"><b><u>Secretaries</u></b></h3>
+                        <a class="nav-link" asp-controller="ViolationManager" asp-action="PassBCC"><span class="spanlink">Pass BCC Decision</span></a>
+
+                        <h3 style="text-align:center;color:green;"><b><u>Managers &amp; Officers</u></b></h3>
+                        <a class="nav-link" asp-controller="ViolationManager" asp-action="Index"><span class="spanlink">Manage Investigators</span></a>
+                        <a class="nav-link" asp-controller="ViolationManager" asp-action="AssignCases"><span class="spanlink">Assign Cases</span></a>
+                        <a class="nav-link" asp-controller="ViolationManager" asp-action="CasesToDrop"><span class="spanlink">Cases To Drop</span></a>
+                        <a class="nav-link" asp-controller="VCTSReports" asp-action="index"><span class="spanlink">Reports</span></a>
+                        <a class="nav-link" asp-controller="VCTSReports" asp-action="DecidedCases"><span class="spanlink">Decided Cases Enforcement Status</span></a>
+                        <a class="nav-link" asp-controller="Notifications" asp-action="index"><span class="spanlink">Notifications</span></a>
+
+                    </li>
+                    <h4 style="text-align:center;color:green;"><b><u>Click Below to Logout</u></b></h4>
+                    <li class="nav-item dropdown no-arrow">
+
+                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">@User.Identity.Name</span><img class="border rounded-circle img-profile" src="~/images/img_save.png" /></a>
+
+                        <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu">
+
+                            <a class="dropdown-item" asp-controller="Account" asp-action="Logout"> <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                @*<hr class="sidebar-divider my-0">
+                    @await Component.InvokeAsync("Notifications")*@
+
+            </div>
+
+        </nav>
+
+        <div class="d-flex flex-column ">
+            <div id="content ">
+
+                <div class="container ">
+
+                    <main role="main" class="pb-3">
+                        <h3 style="text-align:center;"><b>@ViewBag.Subtitle</b></h3>
+                        @RenderBody()
+                    </main>
+                </div>
+
+                <footer class="bg-white sticky-footer">
+                    <div class="container my-auto">
+                        <div class="text-center my-auto copyright"><span>Copyright © Ethiopia Commodity Exchange @DateTime.Now.Year</span></div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    @*<environment include="Development">*@
+
+    @*<script src="~/js/jquery-ui.js"></script>*@
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/js/site.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+
+
+    @*</environment>
+        <environment exclude="Development">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+            </script>
+        </environment>*@
+
+    @if (IsSectionDefined("scripts"))
+    {
+        @RenderSection("scripts", true);
+    }
+
+</body>
+</html>

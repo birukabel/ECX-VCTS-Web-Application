@@ -1,0 +1,21 @@
+﻿<div id="confirmDialog" title="Second Warning">
+    <p>Second Warning is successfully Posted!!!</p>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+       $(document).ready(function () {
+           $('#confirmDialog').dialog({
+               autoOpen: true,
+               Modal: true,
+               resizable: false,
+               buttons: {
+                   "Ok": function () {
+                       window.location = "/Notifications/index";
+                   }
+               },
+           });
+
+    });
+    </script>
+}

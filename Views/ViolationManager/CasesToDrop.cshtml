@@ -1,0 +1,151 @@
+﻿@model ECX.VCTS.ViewModels.CasesToDropViewModel
+@{
+    ViewData["Title"] = "CasesToDrop";
+    ViewBag.Dubtitle = "Cases Suggested to be Dropped by Incestigators";
+}
+
+<div id="zero" hidden>
+    <h2 style="text-align:center">No Cases Suggested to DROP!!!</h2>
+</div>
+
+<div>
+    <table class="table" id="nonzero">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ExchangeCenterName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ViolationSummary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ViolatorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.OthersModel.FirstOrDefault().ViolationModel.ViolationType)
+                </th>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.OthersModel.Count > 0)
+            {
+                @foreach (var item in Model.OthersModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationSummary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Review To Decide", "ReviewToDecide", new { id = item.ViolationModel.ViolationCaseId })
+                        </td>
+                    </tr>
+                }
+            }
+            @if (Model.QualityModel.Count > 0)
+            {
+                @foreach (var item in Model.QualityModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationSummary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Review To Decide", "ReviewToDecide", new { id = item.ViolationModel.ViolationCaseId })
+                        </td>
+                    </tr>
+                }
+            }
+            @if (Model.SurveillanceModel.Count > 0)
+            {
+                @foreach (var item in Model.SurveillanceModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationSummary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Review To Decide", "ReviewToDecide", new { id = item.ViolationModel.ViolationCaseId })
+                        </td>
+                    </tr>
+                }
+            }
+            @if (Model.TradeModel.Count > 0)
+            {
+                @foreach (var item in Model.TradeModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ExchangeCenterName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationSummary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolatorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViolationModel.ViolationType)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Review To Decide", "ReviewToDecide", new { id = item.ViolationModel.ViolationCaseId })
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
+@section scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            if (
+                @Model.OthersModel.Count > 0 ||
+                @Model.QualityModel.Count > 0 ||
+                @Model.SurveillanceModel.Count > 0 ||
+                @Model.TradeModel.Count > 0
+                ) {
+                $('#nonzero').show();
+                $('#zero').hide();
+            } else {
+                $('#nonzero').hide();
+                $('#zero').show();
+            }
+        });
+
+    </script>
+}
+
